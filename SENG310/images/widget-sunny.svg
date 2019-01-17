@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="304px" height="120px" viewBox="0 0 304 120" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>widget-weather</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M303.152025,112.972213 C301.901953,115.849089 298.926787,118.255056 295.499509,119.282512 C293.099376,119.837328 291.004489,119.988223 286.00104,120 C285.830698,119.999599 18.5,120 18.5,120 C12.995511,119.988223 10.9006238,119.837328 8.50049123,119.282512 C5.0732128,118.255056 2.09804698,115.849089 0.847974739,112.972213 C0.171778619,110.941203 0.0164922414,109.505381 0.00130356764,105.616438 L2.48688474e-05,15.2054795 C-0.00206411563,10.6853495 0.126230789,9.19560393 0.847974739,7.02778717 C2.09804698,4.15091112 5.0732128,1.74494399 8.50049123,0.717488254 C10.9006238,0.162672193 12.995511,0.0117771049 17.9989598,3.50404637e-14 C18.1693017,0.000400783825 285.5,0 285.5,0 C291.004489,0.0117771049 293.099376,0.162672193 295.499509,0.717488254 C298.926787,1.74494399 301.901953,4.15091112 303.152025,7.02778717 C303.851526,9.12879527 303.993593,10.5928823 303.999783,14.7945205 L304,105.616438 C303.98347,109.505731 303.828139,110.94145 303.152025,112.972213 Z" id="path-1"></path>
+    </defs>
+    <g id="Comps" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Widgets" transform="translate(-8.000000, -70.000000)">
+            <g id="widget-weather" transform="translate(8.000000, 70.000000)">
+                <g id="Background">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Widget-Background" fill-opacity="0.66" fill="#E6E6E6" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group" transform="translate(20.000000, 29.000000)" fill-rule="nonzero" fill="#000000">
+                    <path d="M25.773283,13.7270189 C18.8642264,13.7270189 13.2638491,19.4362264 13.2638491,26.4807547 C13.2638491,33.5262642 18.8642264,39.237434 25.773283,39.237434 C32.6823396,39.237434 38.282717,33.5262642 38.282717,26.4807547 C38.282717,19.4372075 32.6823396,13.7270189 25.773283,13.7270189 Z M25.773283,37.2751698 C19.9371509,37.2751698 15.1883774,32.4323019 15.1883774,26.4807547 C15.1883774,20.5311698 19.9371509,15.689283 25.773283,15.689283 C31.6094151,15.689283 36.3581887,20.5311698 36.3581887,26.4807547 C36.3581887,32.433283 31.6103774,37.2751698 25.773283,37.2751698 Z" id="Shape"></path>
+                    <rect id="Rectangle-path" x="24.804283" y="0.978188679" width="1.9245283" height="9.81132075"></rect>
+                    <rect id="Rectangle-path" x="24.804283" y="42.1857358" width="1.9245283" height="9.81132075"></rect>
+                    <rect id="Rectangle-path" x="0.754415094" y="25.5064906" width="9.61590566" height="1.96226415"></rect>
+                    <rect id="Rectangle-path" x="41.1627736" y="25.5064906" width="9.62937736" height="1.96226415"></rect>
+                    <rect id="Rectangle-path" transform="translate(39.913654, 12.057405) rotate(45.000000) translate(-39.913654, -12.057405) " x="38.9513992" y="6.95115186" width="1.92450985" height="10.2125058"></rect>
+                    <rect id="Rectangle-path" transform="translate(11.611224, 40.908467) rotate(-135.000000) translate(-11.611224, -40.908467) " x="10.6489689" y="35.8017237" width="1.92450985" height="10.213487"></rect>
+                    <rect id="Rectangle-path" transform="translate(11.618651, 12.062671) rotate(45.000000) translate(-11.618651, -12.062671) " x="6.61059533" y="11.0815479" width="10.0161115" height="1.96224533"></rect>
+                    <rect id="Rectangle-path" transform="translate(39.929357, 40.922944) rotate(-135.004051) translate(-39.929357, -40.922944) " x="34.9204656" y="39.9417517" width="10.0177821" height="1.96238409"></rect>
+                </g>
+                <text id="Clear-Chance-of-Rain" font-family="SFUIText-Regular, SF UI Text" font-size="11" font-weight="normal" line-spacing="16" letter-spacing="-0.075000003" fill="#414141">
+                    <tspan x="92" y="65">Clear</tspan>
+                    <tspan x="92" y="81">Chance of Rain: 2%</tspan>
+                </text>
+                <text id="Victoria,-BC" font-family="SFUIText-Medium, SF UI Text" font-size="13" font-weight="400" letter-spacing="-0.075000003" fill="#000000">
+                    <tspan x="91" y="47">Victoria, BC</tspan>
+                </text>
+                <g id="temp" transform="translate(235.000000, 26.000000)">
+                    <text id="12" font-family="SFUIText-Light, SF UI Text" font-size="40" font-weight="300" letter-spacing="-0.0833333284">
+                        <tspan x="0" y="38" fill="#000000">12</tspan>
+                        <tspan x="41.2981771" y="38" fill="#414141"> </tspan>
+                    </text>
+                    <circle id="Oval-2" stroke="#000000" cx="42" cy="5" r="3"></circle>
+                </g>
+                <g id="sub-temp" transform="translate(244.000000, 71.000000)">
+                    <text id="16-/-8" font-family="SFUIText-Regular, SF UI Text" font-size="9" font-weight="normal" letter-spacing="-0.0270833336" fill="#414141">
+                        <tspan x="0" y="9">16  / 8</tspan>
+                        <tspan x="26.2391276" y="9" letter-spacing="-0.032007575">  </tspan>
+                    </text>
+                    <circle id="Oval-2-Copy" stroke="#414141" stroke-width="0.5" cx="12" cy="2" r="1"></circle>
+                    <circle id="Oval-2-Copy-2" stroke="#414141" stroke-width="0.5" cx="28" cy="2" r="1"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

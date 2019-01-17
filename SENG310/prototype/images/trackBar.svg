@@ -1,0 +1,67 @@
+<svg width="279" height="23" viewBox="0 0 279 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Volume</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-1275 -161)" figma:type="canvas">
+<g id="Volume" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Slider" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Background" style="mix-blend-mode:normal;" opacity="0.2" figma:type="vector">
+<use xlink:href="#path0_fill" transform="translate(1275.23 169.376)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Progress" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:overlay;" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(1275.23 169.376)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" filter="url(#filter0_i)" figma:type="vector">
+<use xlink:href="#path1_fill" transform="translate(1275.23 169.376)" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+<g id="Knob" style="mix-blend-mode:normal;" figma:type="frame">
+<g id="Vector" style="mix-blend-mode:normal;" filter="url(#filter1_ddd)" figma:type="vector">
+<use xlink:href="#path2_fill" transform="translate(1439.61 162.32)" style="mix-blend-mode:normal;"/>
+</g>
+<g id="Vector" style="mix-blend-mode:normal;" figma:type="vector">
+<use xlink:href="#path2_fill" transform="translate(1439.61 162.32)" fill="#FFFFFF" style="mix-blend-mode:normal;"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_i" filterUnits="userSpaceOnUse" x="1273" y="167" width="176" height="7" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<desc>type="innerShadow" x="0" y="0" size="2.01333" spread="0" color="1,1,1,0.2" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0" result="hardAlpha"/>
+<feOffset dx="0" dy="0"/>
+<feGaussianBlur stdDeviation="1.00667"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+</filter>
+<filter id="filter1_ddd" filterUnits="userSpaceOnUse" x="1437" y="161" width="21" height="23" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<desc>type="dropShadow" x="0" y="3.02" size="2.01333" spread="0" color="0,0,0,0.2" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="3.02"/>
+<feGaussianBlur stdDeviation="1.00667"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<desc>type="dropShadow" x="0" y="0" size="1.00667" spread="0" color="0,0,0,0.28" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="0"/>
+<feGaussianBlur stdDeviation="0.503333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.28 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow" result="effect2_dropShadow"/>
+<desc>type="dropShadow" x="0" y="1.00667" size="1.00667" spread="0" color="0,0,0,0.02" blend="normal"</desc>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="1.00667"/>
+<feGaussianBlur stdDeviation="0.503333"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0"/>
+<feBlend mode="normal" in2="effect2_dropShadow" result="effect3_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect3_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" d="M 277.573 0L 0.9048 0C 0.405093 0 0 0.406167 0 0.9072L 0 1.1088C 0 1.60983 0.405093 2.016 0.9048 2.016L 277.573 2.016C 278.072 2.016 278.477 1.60983 278.477 1.1088L 278.477 0.9072C 278.477 0.406167 278.072 0 277.573 0Z"/>
+<path id="path1_fill" d="M 170.002 0L 0.9048 0C 0.405093 0 0 0.406167 0 0.9072L 0 1.1088C 0 1.60983 0.405093 2.016 0.9048 2.016L 170.002 2.016C 170.502 2.016 170.907 1.60983 170.907 1.1088L 170.907 0.9072C 170.907 0.406167 170.502 0 170.002 0Z"/>
+<path id="path2_fill" d="M 8.04267 16.128C 12.4845 16.128 16.0853 12.5176 16.0853 8.064C 16.0853 3.61038 12.4845 0 8.04267 0C 3.60082 0 0 3.61038 0 8.064C 0 12.5176 3.60082 16.128 8.04267 16.128Z"/>
+</defs>
+</svg>
