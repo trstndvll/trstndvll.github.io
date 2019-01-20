@@ -59,11 +59,12 @@ section {
     color: white;
     font-weight: 200;
     letter-spacing: 1px;
+    height: 0px;
 }
 
 .logo {
     display: inline-block;
-    background-image: url(../images/favicon2.png);
+    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     width: 40px;
