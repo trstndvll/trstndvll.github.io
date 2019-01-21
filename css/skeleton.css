@@ -219,8 +219,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #363BC6;
-  border-color: #363BC6; }
+  background-color: black;
+  border-color: black; }
 
 
 /* Forms
