@@ -6,6 +6,7 @@
   <title>Tristan Douville — Product Manager</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
@@ -321,16 +322,23 @@
 
       <div class="contact-form">
         <h3>Send a message</h3>
-        <div class="form-row">
-          <input type="text" placeholder="Your name" />
-        </div>
-        <div class="form-row">
-          <input type="email" placeholder="Your email" />
-        </div>
-        <div class="form-row">
-          <textarea placeholder="Your message…"></textarea>
-        </div>
-        <button class="btn-submit">Send Message</button>
+        <form id="contact-form">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <div class="form-row">
+            <textarea name="message" placeholder="Your message…" required></textarea>
+          </div>
+          <div class="form-row form-recaptcha">
+            <!-- Get your site key at https://www.google.com/recaptcha/admin -->
+            <div class="g-recaptcha" data-sitekey="6LfVh4MsAAAAANov5P2-jjnlIpJJY2QIZqKtCqQv" data-theme="dark" data-size="normal"></div>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+          <div class="form-status" id="form-status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
 
@@ -355,6 +363,49 @@
   // Close menu on link click
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => { mobileMenu.style.display = 'none'; });
+  });
+
+  // Contact form → Zapier webhook
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/26733561/uxtyltk/';
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const recaptchaResponse = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
+    if (!recaptchaResponse) {
+      formStatus.textContent = 'Please complete the reCAPTCHA verification.';
+      formStatus.style.color = '#fca5a5';
+      return;
+    }
+    const formData = new FormData(contactForm);
+    const params = new URLSearchParams({
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    });
+    const url = `${ZAPIER_WEBHOOK}?${params.toString()}`;
+
+    formStatus.textContent = '';
+    contactForm.querySelector('.btn-submit').disabled = true;
+
+    try {
+      // Use Image request to avoid CORS; GET with query params is sent to Zapier
+      await new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = img.onerror = () => resolve();
+        img.src = url;
+      });
+      formStatus.textContent = 'Thanks! Your message has been sent.';
+      formStatus.style.color = '#86efac';
+      contactForm.reset();
+      if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+    } catch (err) {
+      formStatus.textContent = 'Something went wrong. Please try emailing directly.';
+      formStatus.style.color = '#fca5a5';
+    } finally {
+      contactForm.querySelector('.btn-submit').disabled = false;
+    }
   });
 </script>
 </body>
