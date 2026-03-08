@@ -1,261 +1,361 @@
-<!--
-=================================
-Name       : Tristan Douville
-Date       : February 4, 2020
-File Name  : index.html
-Site       : trstndvll.github.io
-=================================
--->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Page Needs
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta charset="utf-8">
-    <title>Tristan Douville</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSS
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Favicon
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
-    <!-- Javascript
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tristan Douville — Product Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <img src="images/hero.png" alt="" width="100%">
-    <div class="overlay">
-        <h1><i class="logo"></i>Tristan Douville</h1>
+
+<!-- NAV -->
+<div class="nav-wrapper">
+<nav>
+  <div class="nav-brand">Tristan <span>Douville</span></div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#experience">Experience</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+</div>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-avatar">
+        <img src="images/tristan.png" alt="Tristan Douville" />
+      </div>
+      <div class="hero-text">
+        <h1>Tristan Douville</h1>
+        <span class="title-badge">Senior Product Manager</span>
+        <p class="bio">Product leader with 5+ years building B2B SaaS products from 0→1 launches to scaling growth. Experienced in managing cross-functional teams, implementing AI-powered workflows, and driving product-led growth. Background in software development and technical writing.</p>
+        <div class="hero-links">
+          <a class="hero-link" href="https://linkedin.com/in/trstndvll" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a class="hero-link" href="https://github.com/trstndvll" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a class="hero-link" href="mailto:trstndvll@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      About Me
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>My Background</h3>
+        <p>I started my career in IT and project management before transitioning into product management. My technical foundation means I can go deep with engineering teams while still keeping the user at the center of every decision.</p>
+      </div>
+      <div class="about-card">
+        <h3>What I Love</h3>
+        <p>I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping something customers actually use. I especially love liaising between technical and non-technical teams.</p>
+      </div>
+      <div class="about-card">
+        <h3>What's Next</h3>
+        <p>I'm looking for a Senior PM or Lead PM role at a growth-stage small business or established organization where I can own a product area end-to-end, learn an entirely new domain, and upskill both technically and professionally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      Skills &amp; Tools
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          Core PM Skills
+        </h3>
+        <div class="tags">
+          <span class="tag">Agentic Workflows</span>
+          <span class="tag">BI &amp; Data Analysis</span>
+          <span class="tag">Competitor Analysis</span>
+          <span class="tag">Customer Interviews</span>
+          <span class="tag">Hiring &amp; Onboarding</span>
+          <span class="tag">Kanban, Agile &amp; Scrum</span>
+          <span class="tag">Prompt Engineering</span>
+          <span class="tag">Prototyping</span>
+          <span class="tag">Team Leadership</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Technical Skills
+        </h3>
+        <div class="tags">
+          <span class="tag">CI/CD Workflows</span>
+          <span class="tag">HTML/CSS</span>
+          <span class="tag">Python</span>
+          <span class="tag">RESTful APIs</span>
+          <span class="tag">SQL</span>
+          <span class="tag">TypeScript</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Tools
+        </h3>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/atlassian" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Atlassian
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">AWS
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/cursor" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Cursor
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/figma" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Figma
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/github" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">GitHub
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/hotjar" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">HotJar
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/mixpanel" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Mixpanel
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/notion" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Notion
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">OpenAI
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/zapier" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Zapier
+          </span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          AI &amp; Automation
+        </h3>
+        <div class="tags">
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/anthropic" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Claude
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">ChatGPT
+          </span>
+          <span class="tag">Magic Patterns</span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/metabase" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Metabase
+          </span>
+          <span class="tag">Agentic Pipelines</span>
+          <span class="tag">MCP</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      Recent Work Experience
     </div>
 
-    <div class="nav">
-        <div class="container spread">
-            <a href="#intro" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Introduction</a>
-            <a href="#competencies" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Competencies</a>
-            <a href="#experience" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Experience</a>
-            <a href="#education" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Education</a>
-            <a href="#projects" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Projects</a>
-            <a href="#publications" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Publications</a>
-            <a href="#contact" onmouseover="style.textDecoration = 'underline'" onmouseout="style.textDecoration = 'none'" class="nav-item">Contact</a>
+    <div class="exp-card">
+      <div class="exp-header">
+        <h3>Senior Product Manager</h3>
+        <div class="exp-meta">
+          <div class="exp-company"><a href="https://pivott.io" target="_blank">Pivott Software</a></div>
+          <div class="exp-date">May 2025 – Present</div>
         </div>
+      </div>
+      <div class="exp-team-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        3-person product team, 8 developers
+      </div>
+      <ul class="exp-bullets">
+        <li><strong>Built and deployed agentic AI workflows</strong> for automated data extraction, reducing manual processing time and enabling quick time-to-value.</li>
+        <li><strong>Partnered directly with the CEO</strong> to define and execute product vision, translating business strategy into a prioritized roadmap.</li>
+        <li><strong>Hired, onboarded, and led a 3-person product team</strong> (Product Designer, UX Designer, Junior PM). Created and documented department processes and managed professional development.</li>
+      </ul>
     </div>
 
-    <hr>
-    <div class="center-div">
-    <a class="button button-primary" target="_blank" style="margin: auto; width: auto;" href="https://github.com/trstndvll">GitHub</a>
-    <a class="button button-primary" target="_blank" style="margin: auto; width: auto;"
-    href="https://www.linkedin.com/in/trstndvll/">LinkedIn</a>
-    <a class="button button-primary" target="_blank" style="margin: auto; width: auto;"
-    href="resume/TristanDouvilleResumeJan2020.pdf">Resume</a>
+    <div class="exp-card">
+      <div class="exp-header">
+        <h3>Product Manager</h3>
+        <div class="exp-meta">
+          <div class="exp-company"><a href="https://pivott.io" target="_blank">Pivott Software</a></div>
+          <div class="exp-date">Jan 2024 – May 2025</div>
+        </div>
+      </div>
+      <div class="exp-team-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team of 8 developers
+      </div>
+      <ul class="exp-bullets">
+        <li><strong>Led 0→1 launch of a contract management SaaS platform</strong> from market analysis and ideation through to revenue in under a year.</li>
+        <li><strong>Designed and executed a product-led growth (PLG) strategy</strong> including freemium tiers, self-serve onboarding, and TTV optimizations, resulting in free-to-paid customer conversions.</li>
+        <li><strong>Ran go-to-market launches</strong> alongside marketing; tracked feature adoption and release cadence weekly.</li>
+      </ul>
     </div>
-    <hr>
-    <div class="container">
-        
-        <div class="row">
-            <div class="eight columns" style="margin-top: 5%;">
-                <h1 id="intro">Introduction</h1>
-                <p>
-                    My name is Tristan Douville and I am an IT & Support Specialist at Rooof. I recently graduated from the University of Victoria with a Bachelor of Science degree in Computer Science and Professional Communication. Below you will find more detailed information about my education, skills, experience, and projects.
-                </p>
-            </div>
-            <div class="three columns">
-                <br>
-                <img class="screenshot" src="images/profile.png">
-            </div>
-            <div class="one column">
-                &nbsp;
-            </div>
-        </div>
-        <hr>
 
-        <div class="row">
-            <div class="ten columns">
-                <h1 id="competencies">Competencies</h1>
-                <h5>Programming & Web Development</h5>
-                <p>
-                    <li>Programming experience with C, C++, Java, Python, SQL</li>
-                    <li>Educated with Git and GitHub Projects, agile SCRUM experience</li>
-                    <li>Experience in web development using Angular, HTML/CSS, JavaScript/TypeScript, PHP</li>
-                <h5>Technical Proficiencies</h5>
-                <p>
-                    <li>Identity and ticket management with Help Scout, RequestTracker</li>
-                    <li>Competent in the Adobe CreativeCloud and Microsoft Office suites</li>
-                    <li>Capable with Android, iOS, macOS, Ubuntu, and Windows operating systems</li>
-                    <li>Windows Server experience, including Active Directory, Exchange, PowerShell, SCCM</li>
-                    <li>Administration experience with Jira/Confluence, including automation and workflow tuning</li>
-                    <li>Hardware troubleshooting with Dell and Lenovo workstations, including novice Mac repairs</li>
-                </p>
-                <h5>Project Management Experience</h5>
-                <p>
-                    <li>Managing hardware refresh projects using PMI methodology</li>
-                    <li>Experience writing project charters, project plans, change requests, etc.</li>
-                </p>
-                <h5>Writing & Editing Skills</h5>
-                <p>
-                    <li>Developing and outlining white papers for various topics</li>
-                    <li>Creating, editing, and revising request for proposals and proposals</li>
-                    <li>Proofreading documents to be clear, complete, concise, and correct</li>
-                    <li>Drafting media kits and news releases, customizing profiles and biopics</li>
-                </p>
-            </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <h3>Product Manager</h3>
+        <div class="exp-meta">
+          <div class="exp-company"><a href="https://postengine.com" target="_blank">PostEngine</a></div>
+          <div class="exp-date">April 2021 – Dec 2023</div>
         </div>
-        <hr>
-	</hr>
-    
-        <div class="row">
-            <div class="nine columns">
-                <h1 id="experience">Experience</h1>
-                <h5>IT & Support Specialist</h5>
-                <p>
-                    September 2019 - Present<br>Rooof, Victoria, BC
-                </p>
-                <p>
-                    <li>Support of internal customer-facing teams</li>
-                    <li>Manage user accounts, office technology, third-party integrations</li>
-                    <li>Jira & Confluence administration, Python scripting, and digital marketing</li>
-                </p>
-                <br>
-                <h5>Computer Help Desk Analyst [Co-op]</h5>
-                <p>
-                    May 2017 - August 2019<br>University Systems, Victoria, BC
-                </p>
-                <p>
-                    <li>Maintenance and setup of computing facilities</li>
-                    <li>Network, software, desktop, and mobile device support</li>
-                    <li>Providing direct IT support for students, faculty, and staff</li>
-                </p>
-                <br>
-                <h5>Desktop Support Services Analyst [Co-op]</h5>
-                <p>
-                    May 2018 - December 2018<br>University Systems, Victoria, BC
-                </p>
-                <p>
-                    <li>Administration of proprietary and third-party software</li>
-                    <li>Keeping accurate and up to date technical documentation</li>
-                    <li>Refreshing desktop hardware and providing regular maintenance</li>
-                    <li>Providing direct IT support for operational and academic departments</li>
-                    <li>Participating in projects, providing one-on-one and small group training sessions</li>
-                </p>
-                <br>
-                <p>*Not comprehensive</p>
-            </div>
-            <div class="two columns">
-                <br>
-                <br>
-                <img class="screenshot" src="images/rooof-logo.jpg">
-                <br>
-                <br>
-                <img class="screenshot" src="images/uvic.png">
-                <br>
-                <br>
-                <img class="screenshot" src="images/uvic.png">
-            </div>
-            <div class="one column">
-                &nbsp;
-            </div>
-        </div>
-	<hr>
-        </hr>
-    
-    <div class="row">
-        <div class="nine columns">
-                <h1 id="education">Education</h1>
-                <h5>BSc, Computer Science & Professional Communication</h5>
-                <p>
-                    September 2014 - August 2019<br>University of Victoria, Victoria, BC
-                </p>
-                <h5 style="margin-top: 125px;">Inbound Marketing Certification</h5>
-                <p>
-                    October 2017<br>HubSpot Academy, Online
-                </p>
-                <h5 style="margin-top: 125px;">Dogwood Diploma with Honours</h5>
-                <p>
-                    September 2010 - June 2014<br>Ballenas Secondary School, Parksville, BC
-                </p>
-            </div>
-            <div class="two columns">
-                <img class="screenshot" src="images/uvic.png">
-                <img class="screenshot" src="images/hubspotlogo.png">
-                <img class="screenshot" src="images/ballenas.jpg">
-            </div>
-            <div class="one column">
-                &nbsp;
-            </div>
-        </div>
-        <hr>
-
-        <div class="row">
-            <div class="eight columns">
-                <h1 id="projects">Projects</h1>
-                <h5>Stop It</h5>
-                <p>An HMTL prototype for an Android cybersecurity and antivirus application</p>
-                <a class="button button-primary" target="_blank" style="margin: auto; width: auto" href="StopIt/index.html">StopIt</a>
-                <br>
-                <br>
-                <h5 style="margin-top: 375px;">Tunecast</h5>
-                <p>An HTML protoype for a weather-based playlists mobile application</p>
-                <a class="button button-primary" target="_blank" style="margin: auto; width: auto;" href="seng310/prototype/index.html">Tunecast</a>
-            </div>
-            <div class="four columns">
-                <img class="screenshot" src="images/si1.png">
-                <img class="screenshot" src="images/tc2.png">
-            </div>
-        </div>
-        <hr>
-        </hr>
-
-        <div class="row">
-            <div class="eight columns">
-                <h1 id="publications">Publications</h1>
-                <h5>The Toquaht Nation: Why Culture Should Benefit from Economic Development</h5>
-                <p>Business Class Magazine</p>
-                <a class="button button-primary" target="_blank" style="margin: auto; width: auto;"
-                href="https://www.uvic.ca/gustavson/assets/docs/BClassSpringSummer2016.pdf">Business Class</a>
-            </div>
-            <div class="four columns">
-                <img class="screenshot" src="images/tq.png">
-            </div>
-        </div>
-        <hr>
-        </hr>
-        
-        <div class="row">
-            <div class="nine columns">
-                <h1 id="contact">Contact</h1>
-                <br>
-                <br>
-                <h5 style="text-transform: lowercase;">tristan@trstndvll.com</h5>
-            </div>
-             <div class="two columns">
-                <br>
-                <img class="screenshot" src="images/gmail.png">
-            </div>
-            <div class="one column">
-                &nbsp;
-            </div>
-        </div>
+      </div>
+      <div class="exp-team-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Team of 6 developers
+      </div>
+      <ul class="exp-bullets">
+        <li><strong>Served as product owner and SME for PostEngine</strong>, a B2B SaaS marketing automation platform. Owned roadmap and stakeholder relationships.</li>
+        <li><strong>Spearheaded 0→1 launch of multiple features</strong>, applying MVP principles to reduce time-to-market and validate value hypotheses.</li>
+        <li><strong>Led agile delivery for a team of 6 developers</strong>; conducted backlog refinement, sprint planning, estimation, and retrospectives.</li>
+        <li><strong>Established OKR &amp; KPI reporting</strong> for the product team, including story point velocity, project budget tracking, and release cadence.</li>
+      </ul>
     </div>
-    <hr>
-    <img src="images/footer2.png" alt="" width="100%">
-    <div>
-        <h6>Copyright © 2019 Tristan Douville. All rights reserved.</h6>
-    </div>
-    <script src="js/main.js"></script>
 
-    <!-- End Document
-    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      Education &amp; Certifications
+    </div>
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <span class="badge">Degree</span>
+        <h3>Bachelors of Science — Computer Science</h3>
+        <div class="inst">Faculty of Engineering, <a href="https://uvic.ca" target="_blank">University of Victoria</a></div>
+        <div class="dates">September 2014 – August 2019</div>
+      </div>
+
+      <div class="edu-card">
+        <span class="badge">Certification</span>
+        <h3>Certified Scrum Product Owner (CSPO)</h3>
+        <div class="inst">Scrum Alliance · Credential ID 001394694</div>
+        <div class="dates">July 2022</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<section id="contact">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Get In Touch
+    </div>
+    <div class="contact-inner">
+      <div class="contact-left">
+        <h2>Open to opportunities.</h2>
+        <p>If you're building something interesting, I'd love to be a part of it. Reach out to me at the links below.</p>
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:trstndvll@gmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+            trstndvll@gmail.com
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/trstndvll" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            linkedin.com/in/trstndvll
+          </a>
+          <a class="contact-link" href="https://github.com/trstndvll" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            github.com/trstndvll
+          </a>
+          <a class="contact-link" href="tel:7786784111">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.43 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.97a16 16 0 0 0 6.08 6.08l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            778-678-4111
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a message</h3>
+        <div class="form-row">
+          <input type="text" placeholder="Your name" />
+        </div>
+        <div class="form-row">
+          <input type="email" placeholder="Your email" />
+        </div>
+        <div class="form-row">
+          <textarea placeholder="Your message…"></textarea>
+        </div>
+        <button class="btn-submit">Send Message</button>
+      </div>
+    </div>
+
+    <div class="footer-copy">
+      © <span id="copy-year"></span> Tristan Douville · Victoria, BC, Canada
+    </div>
+  </div>
+</section>
+
+<script>
+  // Dynamic copyright year
+  document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    const open = mobileMenu.style.display === 'flex';
+    mobileMenu.style.display = open ? 'none' : 'flex';
+    hamburger.setAttribute('aria-expanded', String(!open));
+  });
+  // Close menu on link click
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => { mobileMenu.style.display = 'none'; });
+  });
+</script>
 </body>
 </html>
