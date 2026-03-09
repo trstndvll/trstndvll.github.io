@@ -50,6 +50,7 @@ nav {
   letter-spacing: -0.3px;
 }
 .nav-brand span { color: var(--blue); }
+.nav-brand:hover { text-decoration: none; }
 .nav-links { display: flex; gap: 1.75rem; }
 .nav-links a {
   font-size: 0.875rem;
