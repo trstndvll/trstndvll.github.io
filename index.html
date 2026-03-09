@@ -8,17 +8,14 @@
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" type="image/png" href="/images/favicon.png">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DQZM493FKD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DQZM493FKD');
-</script>
-
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQZM493FKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DQZM493FKD');
+  </script>
 </head>
 <body>
 
@@ -89,8 +86,8 @@
         <p>I started my career in IT and project management before transitioning into product management. My technical foundation means I can go deep with engineering teams while still keeping the user at the center of every decision.</p>
       </div>
       <div class="about-card">
-        <h3>What I Love</h3>
-        <p>I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping something customers actually use. I especially love liaising between technical and non-technical teams.</p>
+        <h3>What I Enjoy</h3>
+        <p>I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping something customers actually use. I especially love liaising between technical and non-technical teams and helping people.</p>
       </div>
       <div class="about-card">
         <h3>What's Next</h3>
@@ -155,9 +152,6 @@
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/amazonaws.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">AWS
           </span>
           <span class="tag">
-            <img src="https://cdn.simpleicons.org/cursor" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Cursor
-          </span>
-          <span class="tag">
             <img src="https://cdn.simpleicons.org/figma" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Figma
           </span>
           <span class="tag">
@@ -167,13 +161,13 @@
             <img src="https://cdn.simpleicons.org/hotjar" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">HotJar
           </span>
           <span class="tag">
+            <img src="https://cdn.simpleicons.org/metabase" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Metabase
+          </span>
+          <span class="tag">
             <img src="https://cdn.simpleicons.org/mixpanel" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Mixpanel
           </span>
           <span class="tag">
             <img src="https://cdn.simpleicons.org/notion" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Notion
-          </span>
-          <span class="tag">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">OpenAI
           </span>
           <span class="tag">
             <img src="https://cdn.simpleicons.org/zapier" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Zapier
@@ -193,10 +187,10 @@
           <span class="tag">
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">ChatGPT
           </span>
-          <span class="tag">Magic Patterns</span>
           <span class="tag">
-            <img src="https://cdn.simpleicons.org/metabase" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Metabase
+            <img src="https://cdn.simpleicons.org/cursor" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Cursor
           </span>
+          <span class="tag">Magic Patterns</span>
           <span class="tag">Agentic Pipelines</span>
           <span class="tag">MCP</span>
         </div>
@@ -330,7 +324,7 @@
 
       <div class="contact-form">
         <h3>Send a message</h3>
-        <form id="contact-form">
+        <form id="contact-form" action="https://formspree.io/f/raqondva" method="POST">
           <div class="form-row">
             <input type="text" name="name" placeholder="Your name" required />
           </div>
@@ -373,10 +367,9 @@
     link.addEventListener('click', () => { mobileMenu.style.display = 'none'; });
   });
 
-  // Contact form → Zapier webhook
+  // Contact form → Formspree
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
-  const ZAPIER_WEBHOOK = 'https://hooks.zapier.com/hooks/catch/26733561/uxtyltk/';
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -386,28 +379,29 @@
       formStatus.style.color = '#fca5a5';
       return;
     }
-    const formData = new FormData(contactForm);
-    const params = new URLSearchParams({
-      name: formData.get('name'),
-      email: formData.get('email'),
-      message: formData.get('message')
-    });
-    const url = `${ZAPIER_WEBHOOK}?${params.toString()}`;
 
     formStatus.textContent = '';
     contactForm.querySelector('.btn-submit').disabled = true;
 
+    const formData = new FormData(contactForm);
+    formData.append('g-recaptcha-response', recaptchaResponse);
+
     try {
-      // Use Image request to avoid CORS; GET with query params is sent to Zapier
-      await new Promise((resolve, reject) => {
-        const img = new Image();
-        img.onload = img.onerror = () => resolve();
-        img.src = url;
+      const res = await fetch(contactForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
       });
-      formStatus.textContent = 'Thanks! Your message has been sent.';
-      formStatus.style.color = '#86efac';
-      contactForm.reset();
-      if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+      if (res.ok) {
+        formStatus.textContent = 'Thanks! Your message has been sent.';
+        formStatus.style.color = '#86efac';
+        contactForm.reset();
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        formStatus.textContent = data.error || 'Something went wrong. Please try emailing directly.';
+        formStatus.style.color = '#fca5a5';
+      }
     } catch (err) {
       formStatus.textContent = 'Something went wrong. Please try emailing directly.';
       formStatus.style.color = '#fca5a5';

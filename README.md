@@ -28,7 +28,7 @@ The layout is optimized for readability on both desktop and mobile and is intend
 - **Fonts**:
   - [Google Fonts](https://fonts.google.com/) — `DM Sans` and `DM Serif Display`.
 - **Contact form**:
-  - [Zapier](https://zapier.com/) webhook — form submissions are sent via query string (`name`, `email`, `message`).
+  - [Formspree](https://formspree.io/) — form submissions are sent via POST to Formspree; you receive and manage them in the Formspree dashboard.
   - [reCAPTCHA v2](https://www.google.com/recaptcha/about/) — "I'm not a robot" checkbox to reduce spam.
 - **Hosting**:
   - [GitHub Pages](https://pages.github.com/) from the `trstndvll.github.io` repository.
