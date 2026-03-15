@@ -473,6 +473,9 @@ section + section { border-top: 1px solid var(--border); }
 .form-row input:focus,
 .form-row textarea:focus { border-color: var(--blue); }
 .form-row textarea { resize: vertical; min-height: 90px; }
+.form-recaptcha--hidden {
+  display: none !important;
+}
 .form-recaptcha .g-recaptcha { display: inline-block; }
 .form-status {
   font-size: 0.875rem;

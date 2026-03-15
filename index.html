@@ -87,7 +87,7 @@
       </div>
       <div class="about-card">
         <h3>What I Enjoy</h3>
-        <p>I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping something customers actually use. I especially love liaising between technical and non-technical teams and helping people.</p>
+        <p>I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping something customers actually use. I especially love being a translator between technical and non-technical teams.</p>
       </div>
       <div class="about-card">
         <h3>What's Next</h3>
@@ -112,15 +112,12 @@
           Core PM Skills
         </h3>
         <div class="tags">
-          <span class="tag">Agentic Workflows</span>
           <span class="tag">BI &amp; Data Analysis</span>
           <span class="tag">Competitor Analysis</span>
           <span class="tag">Customer Interviews</span>
           <span class="tag">Hiring &amp; Onboarding</span>
           <span class="tag">Kanban, Agile &amp; Scrum</span>
-          <span class="tag">Prompt Engineering</span>
           <span class="tag">Prototyping</span>
-          <span class="tag">Team Leadership</span>
         </div>
       </div>
 
@@ -132,10 +129,12 @@
         <div class="tags">
           <span class="tag">CI/CD Workflows</span>
           <span class="tag">HTML/CSS</span>
+          <span class="tag">Prompt Engineering</span>
           <span class="tag">Python</span>
           <span class="tag">RESTful APIs</span>
           <span class="tag">SQL</span>
           <span class="tag">TypeScript</span>
+          <span class="tag">Workflow Building</span>
         </div>
       </div>
 
@@ -182,17 +181,25 @@
         </h3>
         <div class="tags">
           <span class="tag">
-            <img src="https://cdn.simpleicons.org/anthropic" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Claude
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">ChatGPT
           </span>
           <span class="tag">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">ChatGPT
+            <img src="https://cdn.simpleicons.org/anthropic" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Claude
           </span>
           <span class="tag">
             <img src="https://cdn.simpleicons.org/cursor" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Cursor
           </span>
           <span class="tag">Magic Patterns</span>
-          <span class="tag">Agentic Pipelines</span>
           <span class="tag">MCP</span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/n8n" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">n8n
+          </span>
+          <span class="tag">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">OpenAI API
+          </span>
+          <span class="tag">
+            <img src="https://cdn.simpleicons.org/vercel" alt="" style="filter: invert(30%) sepia(90%) saturate(600%) hue-rotate(195deg);">Vercel
+          </span>
         </div>
       </div>
 
@@ -224,6 +231,7 @@
         <li><strong>Built and deployed agentic AI workflows</strong> for automated data extraction, reducing manual processing time and enabling quick time-to-value.</li>
         <li><strong>Partnered directly with the CEO</strong> to define and execute product vision, translating business strategy into a prioritized roadmap.</li>
         <li><strong>Hired, onboarded, and led a 3-person product team</strong> (Product Designer, UX Designer, Junior PM). Created and documented department processes and managed professional development.</li>
+        <li><strong>Hired, onboarded, and supported 3 Software Engineers and a QA Test Engineer</strong>. Worked to establish agile development best practices and foster collaborative team dynamics.</li>
       </ul>
     </div>
 
@@ -242,6 +250,7 @@
       <ul class="exp-bullets">
         <li><strong>Led 0→1 launch of a contract management SaaS platform</strong> from market analysis and ideation through to revenue in under a year.</li>
         <li><strong>Designed and executed a product-led growth (PLG) strategy</strong> including freemium tiers, self-serve onboarding, and TTV optimizations, resulting in free-to-paid customer conversions.</li>
+        <li><strong>Implemented a sandbox environment and sign-up workflow</strong> to demonstrate features to new users and convert them to freemium or paid.</li>
         <li><strong>Ran go-to-market launches</strong> alongside marketing; tracked feature adoption and release cadence weekly.</li>
       </ul>
     </div>
@@ -334,7 +343,7 @@
           <div class="form-row">
             <textarea name="message" placeholder="Your message…" required></textarea>
           </div>
-          <div class="form-row form-recaptcha">
+          <div class="form-row form-recaptcha form-recaptcha--hidden" id="form-recaptcha-wrap" aria-hidden="true">
             <!-- Get your site key at https://www.google.com/recaptcha/admin -->
             <div class="g-recaptcha" data-sitekey="6LfVh4MsAAAAANov5P2-jjnlIpJJY2QIZqKtCqQv" data-theme="dark" data-size="normal"></div>
           </div>
@@ -370,6 +379,25 @@
   // Contact form → Formspree
   const contactForm = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
+  const recaptchaWrap = document.getElementById('form-recaptcha-wrap');
+  const nameInput = contactForm.querySelector('input[name="name"]');
+  const emailInput = contactForm.querySelector('input[name="email"]');
+  const messageInput = contactForm.querySelector('textarea[name="message"]');
+
+  function allFieldsFilled() {
+    return nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && messageInput.value.trim() !== '';
+  }
+  function updateRecaptchaVisibility() {
+    if (allFieldsFilled()) {
+      recaptchaWrap.classList.remove('form-recaptcha--hidden');
+      recaptchaWrap.setAttribute('aria-hidden', 'false');
+    } else {
+      recaptchaWrap.classList.add('form-recaptcha--hidden');
+      recaptchaWrap.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  [nameInput, emailInput, messageInput].forEach(el => el.addEventListener('input', updateRecaptchaVisibility));
 
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -397,6 +425,8 @@
         formStatus.style.color = '#86efac';
         contactForm.reset();
         if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
+        recaptchaWrap.classList.add('form-recaptcha--hidden');
+        recaptchaWrap.setAttribute('aria-hidden', 'true');
       } else {
         const data = await res.json().catch(() => ({}));
         formStatus.textContent = data.error || 'Something went wrong. Please try emailing directly.';
