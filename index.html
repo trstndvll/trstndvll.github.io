@@ -26,6 +26,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#case-studies">Case Studies</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
@@ -37,6 +38,7 @@
 <div class="mobile-menu" id="mobile-menu">
   <a href="#about">About</a>
   <a href="#skills">Skills</a>
+  <a href="#case-studies">Case Studies</a>
   <a href="#experience">Experience</a>
   <a href="#education">Education</a>
   <a href="#contact">Contact</a>
@@ -204,6 +206,158 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- CASE STUDIES -->
+<section id="case-studies">
+  <div class="container">
+    <div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
+      Case Studies
+    </div>
+
+    <details class="case-study">
+      <summary class="case-study-summary">Case Study #1 — Simplifying a Complex Feature to Drive Faster Adoption</summary>
+      <div class="case-study-body">
+        <h3>Context</h3>
+        <p>Leadership proposed a new feature to help customers manage <strong>renewal terms</strong> within <strong>contract documents</strong> — a known <strong>pain point</strong> for users managing <strong>long-term agreements</strong>.</p>
+
+        <h3>Problem</h3>
+        <p>Initial designs aimed to model <strong>every possible renewal scenario</strong> across all document types. While comprehensive, this approach introduced <strong>significant technical complexity</strong>, a <strong>high cognitive load</strong> for end users, and a timeline that would delay a <strong>widely-requested feature</strong>.</p>
+        <p><strong>Core tension:</strong> Deliver a complete solution vs. deliver a usable solution quickly.</p>
+        <p>There was also internal misalignment — <strong>leadership</strong> favored the more robust approach.</p>
+
+        <h3>My Role</h3>
+        <ul class="case-study-list">
+          <li><strong>Analyzed</strong> <strong>session recordings</strong> and <strong>support tickets</strong> to understand real user behavior</li>
+          <li>Used <strong>LLMs</strong> to review <strong>OCR'd contract text</strong> and identify patterns in <strong>renewal terms</strong></li>
+          <li>Found that the <strong>majority of users</strong> had <strong>simple, repeatable renewal patterns</strong></li>
+          <li><strong>Facilitated discussions</strong> with leadership to refocus on <strong>core user needs</strong></li>
+          <li><strong>Managed stakeholder expectations</strong> during a decision conflict</li>
+        </ul>
+
+        <h3>Key Decisions</h3>
+        <p><strong>1. Reduce scope to match real usage</strong><br />Prioritized a recurrence-based model covering the most common renewal scenarios. Avoided building for edge cases upfront.</p>
+        <p><strong>2. Leverage known patterns</strong><br />Drew from existing SaaS conventions and competitor solutions to reduce the user learning curve.</p>
+        <p><strong>3. Position as an MVP</strong><br />Framed the solution as a test of user demand, keeping the door open for expansion. This reduced resistance by aligning on iteration over perfection.</p>
+
+        <h3>Execution</h3>
+        <ul class="case-study-list">
+          <li>Partnered with <strong>engineering</strong> to define a <strong>lean, flexible recurrence system</strong></li>
+          <li>Kept scope tightly aligned to <strong>core use cases</strong></li>
+          <li>Instrumented the feature with <strong>Mixpanel</strong> to measure <strong>adoption</strong> and <strong>usage patterns</strong></li>
+          <li>Led <strong>internal enablement</strong> and <strong>external rollout</strong> through documentation and customer education</li>
+        </ul>
+
+        <h3>Outcome</h3>
+        <ul class="case-study-list">
+          <li>Feature launched successfully and <strong>remains in active use</strong></li>
+          <li>Covered <strong>~95%</strong> of customer use cases, validating the <strong>simplified approach</strong></li>
+          <li>Avoided <strong>significant engineering investment</strong> in low-frequency edge cases</li>
+          <li>The <strong>"comprehensive" solution</strong> was <strong>deprioritized indefinitely</strong>, freeing capacity for <strong>higher-impact roadmap items</strong></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="case-study">
+      <summary class="case-study-summary">Case Study #2 — Scaling Product Knowledge with an Internal AI Assistant</summary>
+      <div class="case-study-body">
+        <h3>Context</h3>
+        <p>The product team was increasingly pulled into <strong>customer support</strong> — fielding interruptions via <strong>Slack</strong>, <strong>email</strong>, and calls to help resolve tickets. <strong>Comprehensive documentation</strong>, <strong>PRDs</strong>, and <strong>BI tools</strong> existed but were <strong>underutilized</strong> by the <strong>Customer Success (CS) team</strong>.</p>
+
+        <h3>Problem</h3>
+        <p>Support staff relied on the <strong>product team</strong> for answers instead of <strong>self-serving</strong> through available resources, causing:</p>
+        <ul class="case-study-list">
+          <li><strong>Constant interruptions</strong> to product work and roadmap execution</li>
+          <li><strong>Slower response times</strong> due to dependency on <strong>PM availability</strong></li>
+          <li><strong>Underutilization</strong> of existing documentation</li>
+        </ul>
+        <p><strong>Core tension:</strong> How do you enable support to independently access product knowledge without making the product team a bottleneck?</p>
+
+        <h3>My Role</h3>
+        <ul class="case-study-list">
+          <li>Owned <strong>internal documentation strategy</strong> as part of the product team</li>
+          <li><strong>Interviewed CS team members</strong> to understand their <strong>real-time support workflows</strong></li>
+          <li>Identified that the issue wasn't lack of documentation — it was lack of <strong>accessibility</strong> and <strong>synthesis</strong></li>
+          <li>Explored solutions ranging from <strong>process improvements</strong> to <strong>tooling</strong></li>
+        </ul>
+
+        <h3>Key Decisions</h3>
+        <p><strong>1. Validate non-technical solutions first</strong><br />Improved internal documentation and ran a lunch &amp; learn on effective self-serve questioning techniques (adapting PM-style user interviewing for support). Helpful, but did not reduce reliance on the product team.</p>
+        <p><strong>2. Invest in a scalable system</strong><br />Identified an opportunity to use AI to aggregate and synthesize internal knowledge. Proposed an internal "Product Concierge" to enable real-time, self-serve answers.</p>
+        <p><strong>3. Prioritize trust and accuracy over breadth</strong><br />Designed the system with strict guardrails: surfacing source references, indicating the age of information, and limiting responses when confidence was low.</p>
+
+        <h3>Execution</h3>
+        <ul class="case-study-list">
+          <li>Defined requirements and architecture for a <strong>Slack-based AI assistant</strong> connected to <strong>internal documentation</strong>, <strong>PRDs</strong>, <strong>code repositories</strong>, and select <strong>BI queries</strong></li>
+          <li>Collaborated with <strong>developers</strong> to validate the approach and ensure <strong>feasibility</strong></li>
+          <li><strong>Built and iterated</strong> on the solution, refining <strong>prompts</strong> and <strong>data connections</strong></li>
+          <li>Implemented <strong>tracking</strong> to monitor <strong>usage</strong> and <strong>response quality</strong></li>
+        </ul>
+
+        <h3>Outcome</h3>
+        <ul class="case-study-list">
+          <li><strong>"Product Concierge"</strong> is now actively used, handling <strong>hundreds of internal queries per month</strong></li>
+          <li>Reduced <strong>direct interruptions</strong> to the product team</li>
+          <li>Improved <strong>speed</strong> and <strong>consistency</strong> of support responses</li>
+          <li>Created a <strong>scalable knowledge system</strong>, reducing dependency on <strong>individual team members</strong></li>
+          <li>Established a foundation for <strong>future internal AI tooling</strong></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="case-study">
+      <summary class="case-study-summary">Case Study #3 — Turning a Custom Client Request into a Scalable Product Opportunity</summary>
+      <div class="case-study-body">
+        <h3>Context</h3>
+        <p>A <strong>high-value client</strong> relied on <strong>email</strong> and <strong>spreadsheets</strong> for a <strong>critical financial workflow</strong> and experienced delays in their <strong>year-end reconciliation</strong> due to <strong>missing records</strong>. They came to our product and leadership team with a request to build a <strong>proper solution</strong>.</p>
+
+        <h3>Problem</h3>
+        <p>The client required a <strong>highly customized workflow</strong> our product didn't support. Key challenges included:</p>
+        <ul class="case-study-list">
+          <li>A <strong>time-sensitive deadline</strong> tied to their <strong>fiscal year-end</strong></li>
+          <li><strong>Conflicting requirements</strong> across <strong>multiple client departments</strong></li>
+          <li><strong>One-off solution risk</strong> — potential roadmap diversion without clear <strong>reuse potential</strong></li>
+        </ul>
+        <p><strong>Core tension:</strong> Solve a critical client problem quickly without introducing long-term product bloat.</p>
+
+        <h3>My Role</h3>
+        <ul class="case-study-list">
+          <li><strong>Led user interviews</strong> with client stakeholders to uncover <strong>root workflow issues</strong></li>
+          <li><strong>Synthesized findings</strong> into clear <strong>product opportunities</strong> for leadership</li>
+          <li>Owned the <strong>PRD</strong> and <strong>solution design</strong>, including a <strong>functional prototype</strong></li>
+          <li>Liaised with <strong>Customer Success</strong> and <strong>Engineering</strong> to ensure alignment</li>
+          <li>Acted as the bridge between <strong>client needs</strong>, <strong>business goals</strong>, and <strong>technical feasibility</strong></li>
+        </ul>
+
+        <h3>Key Decisions</h3>
+        <p><strong>Build vs. defer:</strong></p>
+        <ul class="case-study-list">
+          <li>Option A: Defer to protect the roadmap</li>
+          <li>Option B: Build a one-off solution</li>
+          <li><strong>Option C (chosen): Build an MVP with a scalable architecture</strong></li>
+        </ul>
+        <p><strong>MVP scope definition</strong><br />Prioritized only the core workflow blockers for year-end readiness. Deferred edge cases to post-launch iterations.</p>
+        <p><strong>Platform investment</strong><br />Designed the solution to support configurable workflows (fields, statuses, naming), with clear potential for reuse across other clients.</p>
+
+        <h3>Execution</h3>
+        <ul class="case-study-list">
+          <li>Aligned <strong>internal stakeholders</strong> on <strong>scope vs. timeline</strong> tradeoffs</li>
+          <li>Collaborated with <strong>engineering</strong> to define a <strong>flexible technical design</strong> under <strong>time constraints</strong></li>
+          <li>Presented a <strong>client-facing proposal</strong> including problem framing, a <strong>prototype walkthrough</strong>, a <strong>delivery plan</strong>, and a <strong>pricing and support model</strong></li>
+        </ul>
+
+        <h3>Outcome</h3>
+        <ul class="case-study-list">
+          <li>Client accepted the proposal, increasing spend by <strong>20% YoY</strong></li>
+          <li>Delivered <strong>on time</strong> for <strong>fiscal year-end</strong></li>
+          <li>Established a foundation for <strong>configurable workflows</strong>, enabling <strong>reuse across other clients</strong></li>
+          <li>Project success generated an <strong>internal referral</strong>, expanding into <strong>additional opportunities</strong> within the client's organization</li>
+        </ul>
+      </div>
+    </details>
+
   </div>
 </section>
 

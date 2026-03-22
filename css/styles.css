@@ -363,6 +363,104 @@ section + section { border-top: 1px solid var(--border); }
   color: var(--dark);
 }
 
+/* ── CASE STUDIES ── */
+.case-study {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 0;
+}
+.case-study + .case-study {
+  margin-top: 1rem;
+}
+.case-study-summary {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  list-style: none;
+  cursor: pointer;
+  padding: 1.25rem 1.75rem;
+}
+.case-study-summary::-webkit-details-marker {
+  display: none;
+}
+.case-study-summary::after {
+  content: '';
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+  transform: rotate(45deg);
+  margin-top: -0.2rem;
+  transition: transform 0.2s ease;
+}
+.case-study[open] .case-study-summary::after {
+  transform: rotate(-135deg);
+  margin-top: 0.15rem;
+}
+.case-study-summary:hover {
+  color: var(--blue);
+}
+.case-study-body {
+  padding: 0 1.75rem 1.5rem;
+  border-top: 1px solid var(--border);
+}
+.case-study-body h3 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-top: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.case-study-body h3:first-child {
+  margin-top: 1.25rem;
+}
+.case-study-body p {
+  font-size: 0.9rem;
+  color: var(--mid);
+  line-height: 1.65;
+  margin-bottom: 0.65rem;
+}
+.case-study-body p:last-child {
+  margin-bottom: 0;
+}
+.case-study-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.65rem;
+}
+.case-study-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.45rem;
+  font-size: 0.9rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+.case-study-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.case-study-body .case-study-list + p {
+  margin-top: 0.35rem;
+}
+
 /* ── EDUCATION ── */
 .edu-grid {
   display: grid;
