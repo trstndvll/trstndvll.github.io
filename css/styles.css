@@ -626,6 +626,12 @@ details.case-study {
 }
 
 /* ── RESPONSIVE ── */
+/* Nav: switch to hamburger before inline links wrap (many items at ~750–800px) */
+@media (max-width: 960px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+
 @media (max-width: 640px) {
   .hero-inner { flex-direction: column; align-items: flex-start; gap: 1.25rem; }
   .hero-text h1 { font-size: 2rem; white-space: normal; }
@@ -636,8 +642,6 @@ details.case-study {
   .exp-meta { text-align: left; }
   .contact-inner { flex-direction: column; }
   .contact-form { max-width: 100%; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; }
   .case-study-summary {
     padding: 1.1rem 1.25rem;
   }
