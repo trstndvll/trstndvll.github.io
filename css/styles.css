@@ -402,10 +402,28 @@ details.case-study {
 }
 .case-study-summary-text {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   min-width: 0;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
+}
+.case-study-summary-title {
+  display: block;
+}
+.case-study-summary-subheading {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+.case-study[open] .case-study-summary-subheading {
+  display: none;
 }
 .case-study-chevron {
   flex-shrink: 0;
