@@ -51,14 +51,37 @@ nav {
 }
 .nav-brand span { color: var(--blue); }
 .nav-brand:hover { text-decoration: none; }
-.nav-links { display: flex; gap: 1.75rem; }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-shrink: 1;
+  min-width: 0;
+}
 .nav-links a {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--mid);
   transition: color 0.2s;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  line-height: 1;
 }
 .nav-links a:hover { color: var(--blue); text-decoration: none; }
+.nav-links a svg,
+.mobile-menu a svg {
+  display: block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  max-width: 1em;
+  min-height: 1em;
+  max-height: 1em;
+  flex-shrink: 0;
+}
 
 /* Hamburger button — hidden on desktop */
 .hamburger {
@@ -103,6 +126,11 @@ nav {
   color: var(--mid);
   padding: 0.6rem 0;
   border-bottom: 1px solid var(--border);
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.4rem;
+  line-height: 1;
 }
 .mobile-menu a:last-child { border-bottom: none; }
 .mobile-menu a:hover { color: var(--blue); text-decoration: none; }
@@ -651,8 +679,11 @@ details.case-study {
 }
 
 /* ── RESPONSIVE ── */
-/* Nav: switch to hamburger before inline links wrap (many items at ~750–800px) */
-@media (max-width: 960px) {
+/* Nav: switch to hamburger before inline links wrap (icons widen the bar) */
+@media (max-width: 1100px) and (min-width: 1025px) {
+  .nav-links { gap: 1.25rem; }
+}
+@media (max-width: 1024px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
 }
