@@ -332,7 +332,62 @@
       </div>
     </details>
 
-    <details class="case-study">
+        <details class="case-study">
+      <summary class="case-study-summary">
+        <span class="case-study-summary-text">
+          <span class="case-study-summary-title">Rebuilding a Marketing Website for Team Velocity</span>
+          <span class="case-study-summary-subheading">Led a full marketing site rebuild using AI-native tooling; prototype in 1 week, launched in under 4 weeks.<br />Enabled non-developer marketing contributions for the first time and reduced monthly tooling costs by ~40%.</span>
+        </span>
+        <span class="case-study-chevron" aria-hidden="true"></span>
+      </summary>
+      <div class="case-study-body">
+        <h3>Context</h3>
+        <p>Pivott's marketing site was built on <strong>Webflow</strong> using a purchased template. Over time, the site's needs had grown well past what the platform handled well: the marketing team couldn't independently build new pages, custom interactions required developer involvement, and a planned <strong>redesign</strong> was quietly becoming harder to justify.</p>
+        <p>Meanwhile, the product had real content needs. <strong>New feature landing pages were stalled.</strong> A long-requested pricing page redesign — with collapsible comparison tables and an interactive plan structure — had been deferred repeatedly because the effort in Webflow made it not worth prioritizing.</p>
+
+        <h3>Problem</h3>
+        <p>The root issue wasn't design quality — it was a <strong>platform mismatch</strong>. Webflow's visual editor handled basic copy changes, but broke down for anything structural. Adding a new component, building an interactive pricing layout, or launching a feature landing page each required either a developer or a Webflow specialist. Pivott had neither available for marketing work at this time.</p>
+        <p><strong>Core tension:</strong> The marketing site needed to grow with the product, but every meaningful change was a project in its own right.</p>
+        <p>There was also a compounding risk: Webflow was retiring its <strong>legacy editor</strong>, forcing a workflow transition regardless — making the status quo a temporary solution at best.</p>
+
+        <h3>My Role</h3>
+        <ul class="case-study-list">
+          <li><strong>Identified the constraint proactively</strong> before it became a blocker and built a concrete alternative before bringing it to leadership</li>
+          <li><strong>Built the business case</strong> comparing Webflow and a React/Vercel stack across cost, capability, and long-term flexibility</li>
+          <li><strong>Led the full technical implementation</strong> — repo setup, design system, component architecture, and deployment pipeline</li>
+          <li><strong>Established the AI-native design and build workflow</strong> using Magic Patterns, Claude Code, and Cursor</li>
+          <li><strong>Designed the project plan</strong> including content audit, infrastructure checklist, and DNS migration process</li>
+          <li><strong>Presented the prototype</strong> to the CEO and Head of Sales and secured approval to move the 2027 redesign to 2026</li>
+        </ul>
+
+        <h3>Key Decisions</h3>
+        <p><strong>1. Accelerate the 2027 redesign by over a year</strong><br />The effort required to build a competent Webflow site was roughly equivalent to building in React — but with worse long-term outcomes. Framed this clearly for leadership and got the go-ahead to move immediately, collapsing a year-plus timeline into weeks.</p>
+        <p><strong>2. Use Magic Patterns as the primary design tool</strong><br />Rather than hiring a designer or Webflow consultant, used Magic Patterns to produce a fully on-brand React prototype — complete component library, brand token system, responsive behaviour, and accessibility compliance — before any production code was written. This gave leadership a concrete, clickable prototype to approve before committing engineering resources.</p>
+        <p><strong>3. Choose Next.js over a simpler Vite + React Router setup</strong><br />Evaluated both options and chose Next.js for its server-side rendering (direct SEO benefit for a marketing site), file-based routing, and native metadata handling. Vercel's first-class support made deployment, staging branches, and preview URLs essentially zero-config.</p>
+        <p><strong>4. Design for non-developer contribution from day one</strong><br />The explicit goal was a codebase that a Marketing Manager could actively contribute to — not just review. Chose a named Tailwind token system, a clear folder structure, and wrote a <strong>CLAUDE.md</strong> conventions file so Claude Code and Cursor could produce codebase-consistent output without manual correction. Copy updates, new pages, and image swaps no longer require a developer.</p>
+
+        <h3>Execution</h3>
+        <ul class="case-study-list">
+          <li>Ran <strong>60+ iterations in Magic Patterns</strong> to produce a complete, approved design system covering <strong>10+ page templates</strong> and a full reusable component library — homepage, pricing, sign-up, feature template, About, Contact, Integrations, Terms, and a brand reference page</li>
+          <li><strong>Set up full production infrastructure</strong>: Next.js 15 repo, Vercel hosting with staging and production branch strategy, Vercel Blob for asset storage, and Formspree for form handling with spam filtering and Zapier workflows</li>
+          <li><strong>Wrote CLAUDE.md</strong> — a conventions document covering Tailwind tokens, component patterns, routing, image handling, and SEO conventions, enabling Claude Code and Cursor to contribute consistently without rework</li>
+          <li><strong>Generated 17+ pages</strong> using a combination of Magic Patterns exports, Claude Code, and Cursor with structured CSV-driven content inputs for batch feature page generation</li>
+          <li>Established a repeatable <strong>design-to-production pipeline</strong>: brief in Magic Patterns → export TSX → integrate → Vercel auto-deploys a preview URL for review</li>
+          <li>Produced a full <strong>project plan and task breakdown</strong> — including content audit, infrastructure setup, third-party tool migration checklist, and DNS cutover process — for cross-functional execution</li>
+        </ul>
+
+        <h3>Outcome</h3>
+        <ul class="case-study-list">
+          <li><strong>Full marketing site redesigned and launched in under 4 weeks</strong> — compared to a planned 12+ month timeline under the original 2027 approach</li>
+          <li><strong>Non-developer contribution enabled for the first time</strong>: Marketing Manager can draft pages in Magic Patterns, push content updates via Claude Code, and review changes on Vercel preview URLs without engineering involvement</li>
+          <li><strong>Two high-priority product launches unblocked</strong> — previously stalled on the old platform, built and ready for content at launch</li>
+          <li><strong>All future pages follow a consistent, templated system</strong> — new feature pages are a content swap, not a new project</li>
+          <li><strong>~40% reduction in monthly tooling costs</strong> compared to Webflow site plan and workspace seat fees</li>
+        </ul>
+      </div>
+    </details>
+
+<details class="case-study">
       <summary class="case-study-summary">
         <span class="case-study-summary-text">
           <span class="case-study-summary-title">Eliminating Team Bottlenecks — A Scalable, Internal AI Knowledge System</span>
