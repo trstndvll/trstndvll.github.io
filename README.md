@@ -114,3 +114,16 @@ To deploy updates:
 3. Wait a minute or two for GitHub Pages to rebuild. Then refresh the live URL.
 
 If you changed portfolio copy or added/renamed sections, confirm `llms.txt`, `index.html.md`, and `sitemap.xml` (`<lastmod>`) were updated too. Add a new `<url>` entry when introducing a new crawlable page.
+
+---
+
+### Resume
+
+A print-ready resume page lives at `resume/index.html`. It uses the same design tokens as the main site and is intended to be opened in Chrome and saved as PDF via Cmd+P → Save as PDF.
+
+PDFs are excluded from version control via `.gitignore` (`resume/*.pdf`). Distribute the PDF directly — do not host it publicly.
+
+To export:
+1. Open `resume/index.html` in Chrome (via local server or directly)
+2. Cmd+P → Destination: Save as PDF → Paper size: Letter → Save
+3. Name the file descriptively (e.g. `tristan-douville-resume-2026.pdf`) and keep it locally

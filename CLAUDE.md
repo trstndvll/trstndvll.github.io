@@ -35,6 +35,7 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 | `CNAME` | Custom domain (`www.trstndvll.com`) |
 | `README.md` | Human-facing intro, local dev, deployment |
 | `.gitignore` | Ignores `.DS_Store` |
+| `resume/index.html` | Self-contained print resume — own `<style>` block, same design tokens, exports to PDF via Chrome print |
 
 ## Accessibility — WCAG AA
 
@@ -189,6 +190,16 @@ Not yet enforced — review and accept/reject before treating as canonical.
 - **[SUGGESTED] JS extraction:** If JS grows beyond ~80 lines, move to `js/main.js` — not needed today.
 - **[SUGGESTED] Pre-deploy checklist:** Nav (desktop + mobile), case study expand/collapse, contact form + reCAPTCHA, responsive at 640px/1024px, **WCAG AA contrast spot-check** on any changed colours (browser DevTools or [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)).
 - **[SUGGESTED] Tooling:** Do not add ESLint/Prettier/CI unless the project grows significantly.
+
+## Resume page (`resume/index.html`)
+
+- Self-contained: all styles are in an inline `<style>` block — do not import `css/styles.css`
+- Uses the same CSS custom properties as the main site (copy values from `:root` in `css/styles.css` if tokens change)
+- Designed to fit on a single US Letter page when printed from Chrome
+- `resume/*.pdf` is gitignored — never commit built PDFs
+- Do not link from main site nav, sitemap.xml, llms.txt, or index.html.md
+- When updating resume content, only edit `resume/index.html` — no LLM file sync required for this page
+- To verify layout: open in Chrome, Cmd+P, check "Save as PDF" preview shows single page with no clipping
 
 ## Where README is the better reference
 
