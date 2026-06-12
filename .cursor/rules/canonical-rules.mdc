@@ -1,0 +1,15 @@
+---
+alwaysApply: true
+---
+
+# Canonical project rules
+
+**[CLAUDE.md](CLAUDE.md) is the single source of truth** for conventions, workflow, WCAG AA accessibility, LLM file sync, and agent behaviour in this repo.
+
+Before editing code or content:
+
+1. Read @CLAUDE.md if it is not already in context
+2. Follow its rules — especially WCAG AA, coding conventions, and keeping `index.html.md` / `llms.txt` in sync with `index.html`
+3. Treat [README.md](README.md) as human onboarding only; do not treat it as overriding CLAUDE.md
+
+When guidance conflicts, **CLAUDE.md wins**.

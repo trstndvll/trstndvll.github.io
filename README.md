@@ -18,6 +18,17 @@ The layout is optimized for readability on both desktop and mobile and is intend
 
 ---
 
+### AI agent resources
+
+| Resource | Purpose |
+|----------|---------|
+| [CLAUDE.md](CLAUDE.md) | **Canonical rulebook** — coding conventions, WCAG AA, workflow, LLM file sync, and rules for AI agents working in this repo |
+| [.cursor/rules/](.cursor/rules/) | **Cursor project rules** — always-applied instructions that point Agent at [CLAUDE.md](CLAUDE.md) as the source of truth ([Cursor rules docs](https://cursor.com/docs/rules)) |
+
+Use CLAUDE.md when working with Claude Code or any AI assistant editing this codebase. Cursor loads `.cursor/rules/canonical-rules.mdc` automatically in every Agent session.
+
+---
+
 ### Tech Stack
 
 - **Frontend**: Plain HTML, CSS, and minimal JavaScript.
@@ -32,6 +43,30 @@ The layout is optimized for readability on both desktop and mobile and is intend
   - [reCAPTCHA v2](https://www.google.com/recaptcha/about/) — "I'm not a robot" checkbox to reduce spam.
 - **Hosting**:
   - [GitHub Pages](https://pages.github.com/) from the `trstndvll.github.io` repository.
+
+---
+
+### LLM-friendly files
+
+This site follows the [llms.txt](https://llmstxt.org/) convention for LLM-readable content:
+
+| File | URL | Purpose |
+|------|-----|---------|
+| `llms.txt` | `https://www.trstndvll.com/llms.txt` | Curated summary for LLMs |
+| `index.html.md` | `https://www.trstndvll.com/index.html.md` | Full markdown mirror of the portfolio page |
+
+**When updating site content** (hero, case studies, experience, skills, nav sections, contact, etc.), update both files so they stay in sync with `index.html`. See [CLAUDE.md](CLAUDE.md) for the full sync checklist.
+
+---
+
+### SEO & discovery
+
+| File | URL | Purpose |
+|------|-----|---------|
+| `sitemap.xml` | `https://www.trstndvll.com/sitemap.xml` | XML sitemap — lists all crawlable pages (`/`, `/llms.txt`, `/index.html.md`) |
+| `robots.txt` | `https://www.trstndvll.com/robots.txt` | Crawler directives; references the sitemap |
+
+When you add a new standalone page or change portfolio content, update `sitemap.xml` per [CLAUDE.md](CLAUDE.md). In-page section anchors (`#about`, etc.) are not separate sitemap entries.
 
 ---
 
@@ -77,3 +112,5 @@ To deploy updates:
    git push origin main
    ```
 3. Wait a minute or two for GitHub Pages to rebuild. Then refresh the live URL.
+
+If you changed portfolio copy or added/renamed sections, confirm `llms.txt`, `index.html.md`, and `sitemap.xml` (`<lastmod>`) were updated too. Add a new `<url>` entry when introducing a new crawlable page.

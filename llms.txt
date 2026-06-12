@@ -1,0 +1,71 @@
+# Tristan Douville
+
+> Senior Product Manager with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. Background in computer science and technical writing. Based in Victoria, BC, Canada. Builds LLM-powered workflows and AI product discovery tools. Open to Senior PM or Lead PM roles at growth-stage or established organizations.
+
+Tristan Douville is a product leader who works directly with executive leadership on strategy and has built product functions from the ground up — hiring teams, designing operating models, and establishing delivery processes. His technical foundation lets him go deep with engineering while keeping users front-and-centre.
+
+**Current role:** Senior Product Manager at [Pivott Software](https://pivott.io) (May 2025–present), leading a 3-person product team with 8 developers.
+
+**Career focus:** 0→1 products, executive collaboration, cross-functional outcomes, measurable business results. Thrives as a translator between technical and non-technical teams.
+
+**Looking for:** End-to-end product ownership in a new domain at a growth-stage small business or established organization.
+
+**Contact:** trstndvll@gmail.com · [LinkedIn](https://linkedin.com/in/trstndvll) · [GitHub](https://github.com/trstndvll)
+
+### Skills (summary)
+
+- **Product leadership:** Agile/Kanban/Scrum, AI strategy, BI & data analysis, competitor analysis, customer interviews, product governance
+- **Technical:** Python, SQL, TypeScript, HTML/CSS, data modelling, prompt engineering, SR&ED reporting
+- **Tools:** Atlassian, AWS, Figma, GitHub, HotJar, Metabase, Mixpanel, Notion, Zapier
+- **AI & automation:** ChatGPT, Claude, Cursor, MCP, n8n, OpenAI API, Magic Patterns, Vercel
+
+### Experience (summary)
+
+| Role | Company | Dates |
+|------|---------|-------|
+| Senior Product Manager | Pivott Software | May 2025 – Present |
+| Product Manager | Pivott Software | Jan 2024 – May 2025 |
+| Product Manager | PostEngine | Apr 2021 – Dec 2023 |
+
+**Pivott highlights:** Built product function from scratch; 0→1 contract management SaaS launch; PLG strategy with freemium tiers; agentic AI workflows; scaled engineering 5→8.
+
+**PostEngine highlights:** Product owner for B2B marketing automation SaaS; multiple 0→1 feature launches; agile delivery for 6 developers; OKR/KPI reporting.
+
+**Volunteering:** Mentor, ProductBC PM Mentorship Program (Sep 2024–present) — 3 mentees across 6-month engagements.
+
+**Education:** BSc Computer Science, University of Victoria (2014–2019). Certified Scrum Product Owner (CSPO), Scrum Alliance (2022).
+
+### Case studies (summary)
+
+1. **Building a Product Function from Scratch** — Designed full SDLC (17 phases); grew solo PM to 3-person team; 25% reduction in production bugs; enabled 0→1 platform launch at Pivott.
+2. **Protecting Velocity by Reducing Scope** — Scoped renewal-terms MVP to ~95% of real usage using session recordings, support tickets, and LLM analysis of OCR'd contracts; shipped on time; comprehensive approach deprioritized.
+3. **Rebuilding a Marketing Website for Team Velocity** — Led Webflow → Next.js/Vercel rebuild with AI-native tooling (Magic Patterns, Claude Code, Cursor); prototype in 1 week, launched in under 4 weeks; ~40% tooling cost reduction; enabled non-developer marketing contributions.
+4. **Internal AI Knowledge System ("Product Concierge")** — Slack-based assistant synthesizing docs, PRDs, repos, and BI; handles hundreds of internal queries/month; reduced product team interruptions.
+5. **High-Value Client → 20% Revenue Lift** — Turned client workflow pain point into configurable platform MVP; delivered on fiscal year-end deadline; 20% YoY spend increase; unlocked expansion within account.
+
+## Full site content
+
+- [Portfolio (markdown)](https://www.trstndvll.com/index.html.md): Complete markdown version of the single-page portfolio — case studies, experience, skills, education, and contact
+
+## Site sections
+
+- [About](https://www.trstndvll.com/#about): Background, what I enjoy, what I'm looking for
+- [Skills & Tools](https://www.trstndvll.com/#skills): Product leadership, technical skills, tools, AI & automation
+- [Case Studies](https://www.trstndvll.com/#case-studies): Five expandable case studies with Context → Outcome structure
+- [Experience](https://www.trstndvll.com/#experience): Pivott and PostEngine roles with bullet highlights
+- [Volunteering](https://www.trstndvll.com/#volunteering): ProductBC mentorship
+- [Education](https://www.trstndvll.com/#education): UVic BSc CS, CSPO certification
+- [Contact](https://www.trstndvll.com/#contact): Email, LinkedIn, contact form
+
+## Profiles
+
+- [LinkedIn](https://linkedin.com/in/trstndvll): Professional profile
+- [GitHub](https://github.com/trstndvll): Code and projects
+- [Email](mailto:trstndvll@gmail.com): trstndvll@gmail.com
+
+## Optional
+
+- [Pivott Software](https://pivott.io): Current employer — contract management SaaS
+- [PostEngine](https://postengine.com): Former employer — B2B marketing automation
+- [ProductBC](https://productbc.ca/): PM mentorship program (Vancouver, BC)
+- [University of Victoria](https://uvic.ca): BSc Computer Science alma mater

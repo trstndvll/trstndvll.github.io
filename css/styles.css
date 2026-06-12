@@ -1,10 +1,12 @@
 :root {
   --blue: #1a6bd6;
+  --blue-dark: #1558b0; /* WCAG AA fix — was: inline #1558b0 on .btn-submit:hover */
   --blue-light: #e8f0fc;
   --blue-mid: #c5d8f8;
   --dark: #111827;
   --mid: #374151;
   --muted: #6b7280;
+  --muted-on-dark: #9ca3af; /* WCAG AA fix — was: #6b7280 placeholder / #4b5563 footer */
   --border: #e5e9f0;
   --bg: #f7f9fc;
   --white: #ffffff;
@@ -244,7 +246,7 @@ section + section { border-top: 1px solid var(--border); }
   border-radius: 99px;
   border: 1.5px solid var(--blue-mid);
   background: var(--blue-light);
-  color: var(--blue);
+  color: var(--blue-dark); /* WCAG AA fix — was: var(--blue) */
   font-size: 0.82rem;
   font-weight: 600;
   transition: background 0.18s, border-color 0.18s;
@@ -317,7 +319,7 @@ section + section { border-top: 1px solid var(--border); }
   align-items: center;
   gap: 0.35rem;
   background: var(--blue-light);
-  color: var(--blue);
+  color: var(--blue-dark); /* WCAG AA fix — was: var(--blue) */
   border: 1px solid var(--blue-mid);
   border-radius: 99px;
   padding: 0.25rem 0.75rem;
@@ -547,7 +549,7 @@ details.case-study {
 .edu-card .badge {
   display: inline-block;
   background: var(--blue-light);
-  color: var(--blue);
+  color: var(--blue-dark); /* WCAG AA fix — was: var(--blue) */
   border: 1px solid var(--blue-mid);
   border-radius: 99px;
   font-size: 0.72rem;
@@ -638,9 +640,9 @@ details.case-study {
   transition: border-color 0.2s;
 }
 .form-row input::placeholder,
-.form-row textarea::placeholder { color: #6b7280; }
+.form-row textarea::placeholder { color: var(--muted-on-dark); /* WCAG AA fix — was: #6b7280 */ }
 .form-row input:focus,
-.form-row textarea:focus { border-color: var(--blue); }
+.form-row textarea:focus { border-color: var(--blue-mid); /* WCAG AA fix — was: var(--blue) */ }
 .form-row textarea { resize: vertical; min-height: 90px; }
 .form-recaptcha--hidden {
   display: none !important;
@@ -664,18 +666,37 @@ details.case-study {
   cursor: pointer;
   transition: background 0.18s;
 }
-.btn-submit:hover { background: #1558b0; }
+.btn-submit:hover { background: var(--blue-dark); /* WCAG AA fix — was: #1558b0 */ }
 .btn-submit:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
-.footer-copy {
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   margin-top: 2.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid #1f2937;
+}
+.footer-copy {
   font-size: 0.78rem;
-  color: #4b5563;
-  text-align: center;
+  color: var(--muted-on-dark); /* WCAG AA fix — was: #4b5563 */
+  text-align: left;
+}
+.footer-llm-link {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--muted-on-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.footer-llm-link:hover { color: #fff; }
+.footer-llm-link:focus-visible {
+  outline: 2px solid var(--blue-mid);
+  outline-offset: 2px;
 }
 
 /* ── RESPONSIVE ── */
