@@ -33,7 +33,7 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 
 ### Technical Skills
 
-- Data Modelling
+- Data Modeling
 - HTML/CSS
 - Prompt Engineering
 - Python
@@ -47,7 +47,7 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 - AWS
 - Figma
 - GitHub
-- HotJar
+- Hotjar
 - Metabase
 - Mixpanel
 - Notion

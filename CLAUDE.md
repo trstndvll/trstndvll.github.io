@@ -75,7 +75,7 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 - Inline Feather-style SVG icons on nav and section titles
 - Semantic layout: `<section id="…">` → `.container` wrapper
 - Case studies: native `<details>/<summary>` (not JS accordion)
-- Copy: Canadian English
+- Copy: Canadian English (`en-CA`) — use **-ize** spellings (`optimize`, `analyze`, `prioritize`, `synthesize`), not **-ise**
 
 ### CSS
 
@@ -146,7 +146,7 @@ See [README.md](README.md) for step-by-step local dev and deployment instruction
 - Add `/* WCAG AA fix */` comments when adjusting colours for contrast
 - Preserve `aria-*` attributes, alt text, focus states, and `aria-live` feedback patterns
 - Test locally with HTTP server before considering done
-- Use Canadian English in copy edits
+- Use Canadian English in copy edits — **-ize** spellings (`optimize`, `analyze`), not **-ise**
 - When editing portfolio copy or structure in `index.html`, update `index.html.md` and `llms.txt` in the same pass — do not leave them stale
 - After any content/structure edit: spot-check `llms.txt` and `index.html.md` reflect the same facts and section anchors as `index.html`
 - When adding a new crawlable page or materially updating an existing one, update `sitemap.xml` (`<lastmod>` at minimum; new `<url>` entry for new pages)
