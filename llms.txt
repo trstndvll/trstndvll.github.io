@@ -16,7 +16,7 @@ Tristan Douville is a product leader who works directly with executive leadershi
 
 - **Product leadership:** Agile/Kanban/Scrum, AI strategy, BI & data analysis, competitor analysis, customer interviews, product governance
 - **Technical:** Python, SQL, TypeScript, HTML/CSS, data modelling, prompt engineering, SR&ED reporting
-- **Tools:** Atlassian, AWS, Figma, GitHub, HotJar, Metabase, Mixpanel, Notion, Zapier
+- **Tools:** Atlassian, AWS, Figma, GitHub, Hotjar, Metabase, Mixpanel, Notion, Zapier
 - **AI & automation:** ChatGPT, Claude, Cursor, MCP, n8n, OpenAI API, Magic Patterns, Vercel
 
 ### Experience (summary)

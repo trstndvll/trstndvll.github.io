@@ -280,23 +280,23 @@
       print-color-adjust: exact;
     }
 
-    /* ── SELECTED WORK ── */
+    .exp-bullets li strong {
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .section-selected-work .exp-bullets li {
+      padding-left: 0;
+    }
+
+    .section-selected-work .exp-bullets li::before {
+      content: none;
+    }
+
+    /* ── WORK CARDS (Selected Work + Experience) ── */
     .work-card {
       border-left: 3px solid var(--blue-mid);
       padding-left: 10px;
-    }
-
-    .work-title {
-      font-size: 10.5px;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 2px;
-    }
-
-    .work-desc {
-      font-size: 9.5px;
-      color: var(--muted);
-      line-height: 1.38;
     }
 
     /* ── SKILLS ── */
@@ -456,7 +456,7 @@
         <h1 class="header-name">Tristan Douville</h1>
         <span class="title-badge">Senior Product Manager</span>
       </div>
-      <p class="header-bio">Product leader with 5+ years driving B2B SaaS from 0→1 to enterprise scale. Builds product functions from the ground up — hiring, operating models, delivery processes. Hands-on with Python, SQL, LLM APIs, and agentic AI workflows.</p>
+      <p class="header-bio">Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. I work directly with executive leadership on strategy and I've built product functions from the ground up — hiring teams, designing operating models, and establishing processes that let development move fast. I've also built LLM-powered workflows. I'm looking for a Senior PM role where I can learn an entirely new domain with a team that's passionate and embraces experimentation.</p>
       <address class="header-contact">
         <a class="contact-item" href="tel:7786784111">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -483,42 +483,62 @@
 
     <div class="columns">
       <main class="col-left">
-        <section class="section">
+        <section class="section section-selected-work">
           <h2 class="section-title">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
             Selected Work
           </h2>
 
           <article class="card work-card">
-            <h3 class="work-title">Rebuilding a Marketing Website for Team Velocity</h3>
-            <p class="work-desc">Led Webflow → Next.js/Vercel rebuild with AI-native tooling (Magic Patterns, Claude Code, Cursor); prototype in <strong>1 week</strong>, launched in under <strong>4 weeks</strong>; <strong>~40%</strong> tooling cost reduction; enabled non-developer marketing contributions.</p>
+            <div class="exp-header">
+              <p class="exp-title"><strong>Rebuilding a React Marketing Website with Cursor for Team Velocity</strong></p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Led Webflow → Next.js/Vercel rebuild with AI-native tooling (Magic Patterns, Claude Code, Cursor); prototype in <strong>1 week</strong>, launched in under <strong>4 weeks</strong>; <strong>~40%</strong> tooling cost reduction; enabled non-developer marketing contributions. <strong>99%</strong> Lighthouse score. Implemented <strong>AEO</strong>.</li>
+            </ul>
           </article>
 
           <article class="card work-card">
-            <h3 class="work-title">AI Knowledge System</h3>
-            <p class="work-desc">Built a Slack-based AI assistant connected to PRDs, docs, and BI queries — handling <strong>hundreds of internal queries/month</strong> and eliminating a recurring PM team bottleneck without adding headcount.</p>
+            <div class="exp-header">
+              <p class="exp-title"><strong>Creating Internal AI Knowledge Systems</strong></p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Shipped a Slack-based AI assistant synthesizing PRDs, docs, repos, and BI to help internal teams ask questions about our product — handling <strong>hundreds of internal queries/month</strong> and eliminating recurring product team interruptions without added headcount.</li>
+            </ul>
           </article>
 
           <article class="card work-card">
-            <h3 class="work-title">Scope Discipline — Solving for the 95%</h3>
-            <p class="work-desc">Anchored an MVP in session recordings and LLM-analysed contract data to cover <strong>~95%</strong> of renewal use cases; shipped on time and avoided a months-long engineering detour.</p>
+            <div class="exp-header">
+              <p class="exp-title"><strong>MVP Scope Discipline — Solving for the 95%</strong></p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Scoped an MVP from session recordings and LLM-analyzed contracts covering <strong>~95%</strong> of renewal cases; shipped on time, sidestepping a months-long edge-case detour.</li>
+            </ul>
           </article>
 
           <article class="card work-card">
-            <h3 class="work-title">Revenue Expansion</h3>
-            <p class="work-desc">Turned a high-value client's year-end workflow pain into a <strong>20% YoY</strong> revenue increase; delivered a configurable workflow platform on deadline with reuse potential across the account base.</p>
+            <div class="exp-header">
+              <p class="exp-title"><strong>Expanding Revenue with an Existing Client</strong></p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Converted a high-value client's year-end reconciliation pain into <strong>20% YoY</strong> revenue growth; delivered a configurable workflow platform on fiscal deadline with reuse across accounts.</li>
+            </ul>
           </article>
 
           <article class="card work-card">
-            <h3 class="work-title">Product Function 0→1</h3>
-            <p class="work-desc">Designed a <strong>17-phase</strong> SDLC from scratch; grew from solo PM to a 3-person team in <strong>6 months</strong> with a <strong>25%</strong> reduction in production bugs following QA introduction.</p>
+            <div class="exp-header">
+              <p class="exp-title"><strong>Designing a Product Lifecycle from 0→1</strong></p>
+            </div>
+            <ul class="exp-bullets">
+              <li>Built a <strong>17-phase</strong> SDLC from zero; scaled from solo PM to a 3-person team in <strong>6 months</strong>, cutting production bugs <strong>25%</strong> after introducing QA and acceptance testing.</li>
+            </ul>
           </article>
         </section>
 
         <section class="section">
           <h2 class="section-title">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            Experience
+            Product Experience
           </h2>
 
           <article class="card work-card">
@@ -527,9 +547,9 @@
               <span class="exp-date">May 2025 – Present</span>
             </div>
             <ul class="exp-bullets">
-              <li>Built and deployed agentic AI workflows for automated data extraction, reducing manual processing time and enabling quick time-to-value.</li>
-              <li>Collaborated directly with the CEO to define product vision, translate business strategy into a prioritised roadmap, and identify new revenue opportunities.</li>
-              <li>Designed a formal product–design–engineering operating model; hired and onboarded a 3-person product team and scaled engineering from 5 to 8.</li>
+              <li>Built and deployed <strong>agentic AI workflows</strong> for automated data extraction, reducing <strong>manual processing time</strong> and enabling quick time-to-value.</li>
+              <li>Collaborated directly with the <strong>CEO</strong> to define product vision, translate business strategy into a prioritized roadmap, and identify <strong>new revenue opportunities</strong>.</li>
+              <li>Designed a formal <strong>product–design–engineering operating model</strong>; hired and onboarded a <strong>3-person product team</strong> and scaled engineering from <strong>5 to 8</strong>.</li>
             </ul>
           </article>
 
@@ -539,9 +559,9 @@
               <span class="exp-date">Jan 2024 – May 2025</span>
             </div>
             <ul class="exp-bullets">
-              <li>Led 0→1 launch of a contract management SaaS platform from market analysis through to revenue in under a year.</li>
-              <li>Designed and executed a PLG strategy — freemium tiers, self-serve onboarding, and TTV optimisations — resulting in free-to-paid conversions.</li>
-              <li>Built sandbox environment and sign-up workflow to demonstrate features and convert new users to freemium or paid.</li>
+              <li>Led <strong>0→1 launch</strong> of a contract management SaaS platform from market analysis through to revenue in <strong>under a year</strong>.</li>
+              <li>Designed and executed a <strong>PLG strategy</strong> — freemium tiers, self-serve onboarding, and TTV optimizations — resulting in <strong>free-to-paid conversions</strong>.</li>
+              <li>Built <strong>sandbox environment</strong> and sign-up workflow to demonstrate features and convert new users to freemium or paid.</li>
             </ul>
           </article>
 
@@ -551,10 +571,9 @@
               <span class="exp-date">April 2021 – Dec 2023</span>
             </div>
             <ul class="exp-bullets">
-              <li>Served as product owner and SME for a B2B SaaS marketing automation platform; owned roadmap and stakeholder relationships.</li>
-              <li>Spearheaded 0→1 launches of multiple features applying MVP principles to reduce time-to-market and validate value hypotheses.</li>
-              <li>Established OKR &amp; KPI reporting — story point velocity, project budget tracking, and release cadence metrics.</li>
-              <li>Led agile delivery for a team of 6 developers; conducted backlog refinement, sprint planning, estimation, and retrospectives.</li>
+              <li>Served as <strong>product owner and SME</strong> for a B2B SaaS marketing automation platform; owned roadmap and stakeholder relationships.</li>
+              <li>Spearheaded <strong>0→1 launches</strong> of multiple features applying agile MVP principles to reduce <strong>time-to-market</strong> and validate value hypotheses.</li>
+              <li>Established <strong>OKR &amp; KPI reporting</strong> — story point velocity, project budget tracking, and release cadence metrics.</li>
             </ul>
           </article>
         </section>
@@ -581,7 +600,7 @@
             <div class="skill-group">
               <p class="skill-label">Technical</p>
               <div class="tags">
-                <span class="tag">Data Modelling</span>
+                <span class="tag">Data Modeling</span>
                 <span class="tag">HTML / CSS</span>
                 <span class="tag">Prompt Engineering</span>
                 <span class="tag">Python</span>
@@ -598,7 +617,7 @@
                 <span class="tag">AWS</span>
                 <span class="tag">Figma</span>
                 <span class="tag">GitHub</span>
-                <span class="tag">HotJar</span>
+                <span class="tag">Hotjar</span>
                 <span class="tag">Metabase</span>
                 <span class="tag">Mixpanel</span>
                 <span class="tag">Notion</span>
@@ -653,9 +672,9 @@
             <p class="edu-inst">ProductBC · Vancouver, BC</p>
             <p class="edu-dates">Sept 2024 – Present</p>
             <ul class="exp-bullets">
-              <li>Mentored 3 product managers across separate 6-month engagements (Associate PM to PM).</li>
-              <li>Held bi-weekly 1:1s focused on real-world product challenges, team dynamics, and career development.</li>
-              <li>Fostered a space for honest, practical conversation — balancing structured feedback with genuine camaraderie and peer support.</li>
+              <li>Mentored <strong>3 product managers</strong> across separate <strong>6-month engagements</strong> (Associate PM to PM).</li>
+              <li>Held bi-weekly 1:1s focused on real-world product challenges, team dynamics, and <strong>career development</strong>.</li>
+              <li>Fostered a space for <strong>candid conversations</strong> — gave perspective without assuming solutions.</li>
             </ul>
           </article>
         </section>
