@@ -68,6 +68,7 @@
     <div class="hero-inner">
       <div class="hero-avatar">
         <img src="images/tristan.png" alt="Tristan Douville" />
+        <span class="hero-avatar-tooltip" aria-hidden="true">Thanks for checking out my portfolio! 👋</span>
       </div>
       <div class="hero-text">
         <h1>Tristan Douville</h1>
@@ -697,6 +698,67 @@
   mobileMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => { mobileMenu.style.display = 'none'; });
   });
+
+  // Desktop nav: highlight current section (not hero)
+  const NAV_OFFSET = 56;
+  const SECTION_IDS = ['about', 'skills', 'case-studies', 'experience', 'volunteering', 'education', 'contact'];
+  const desktopNavQuery = window.matchMedia('(min-width: 1025px)');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const heroSection = document.getElementById('hero');
+  const sections = SECTION_IDS.map(id => document.getElementById(id));
+  let navSpyScheduled = false;
+
+  function setActiveNavLink(activeId) {
+    navLinks.forEach(link => {
+      const id = link.getAttribute('href').slice(1);
+      const isActive = id === activeId;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveNavLink() {
+    navSpyScheduled = false;
+    if (!desktopNavQuery.matches) {
+      setActiveNavLink(null);
+      return;
+    }
+
+    const scrollPos = window.scrollY + NAV_OFFSET;
+    if (scrollPos < heroSection.offsetTop + heroSection.offsetHeight) {
+      setActiveNavLink(null);
+      return;
+    }
+
+    const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+    let activeId = nearBottom ? 'contact' : null;
+    if (!activeId) {
+      for (const section of sections) {
+        if (section.offsetTop <= scrollPos) {
+          activeId = section.id;
+        }
+      }
+    }
+
+    setActiveNavLink(activeId);
+  }
+
+  function scheduleNavSpyUpdate() {
+    if (!navSpyScheduled) {
+      navSpyScheduled = true;
+      requestAnimationFrame(updateActiveNavLink);
+    }
+  }
+
+  window.addEventListener('scroll', scheduleNavSpyUpdate, { passive: true });
+  window.addEventListener('resize', scheduleNavSpyUpdate);
+  desktopNavQuery.addEventListener('change', scheduleNavSpyUpdate);
+  window.addEventListener('load', updateActiveNavLink);
+  updateActiveNavLink();
 
   // Contact form → Formspree
   const contactForm = document.getElementById('contact-form');
