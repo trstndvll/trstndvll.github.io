@@ -33,7 +33,9 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 | `sitemap.xml` | XML sitemap for search engines — served at `/sitemap.xml`; lists all crawlable URLs |
 | `robots.txt` | Crawler directives — served at `/robots.txt`; points to `sitemap.xml` |
 | `CNAME` | Custom domain (`www.trstndvll.com`) |
+| `404.html` | GitHub Pages custom 404 — `noindex`, reuses `css/styles.css` |
 | `README.md` | Human-facing intro, local dev, deployment |
+| `.cursor/rules/` | Cursor always-applied rules — points agents at CLAUDE.md |
 | `.gitignore` | Ignores `.DS_Store` |
 | `resume/index.html` | Self-contained print resume — own `<style>` block, same design tokens, exports to PDF via Chrome print |
 
@@ -57,7 +59,9 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 - Interactive controls: `aria-label`, `aria-expanded`, `aria-live`
 - Content images: meaningful `alt` text; decorative tool icons: `alt=""`
 - Form reCAPTCHA hidden until fields filled; `aria-hidden` toggled with visibility
+- Active nav link: `.is-active` + `aria-current="location"` (desktop scroll-spy)
 - `scroll-margin-top: 56px` on sections so anchor nav doesn't hide headings
+- `prefers-reduced-motion` respected for nav and card transitions
 
 **Keyboard**
 - Hamburger menu, form submit, and `<details>` case-study summaries must work without a mouse
@@ -85,13 +89,21 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 - Class naming: kebab-case; BEM-style modifiers (`form-recaptcha--hidden`)
 - Card pattern: white bg, `border: 1px solid var(--border)`, `border-radius: var(--radius)`
 - Typography: DM Sans (body/UI), DM Serif Display (hero, contact, case study titles)
-- Responsive breakpoints: `1024px` (nav → hamburger), `640px` (grid collapse)
+- Responsive breakpoints:
+  - `1100px` — tighten desktop nav link gap before hamburger switch
+  - `1025px` — desktop-only floating nav width + scroll-spy media query
+  - `1024px` — nav → hamburger
+  - `640px` — grid collapse
+- Floating nav: `.nav-wrapper--floating` modifier toggled on scroll; `prefers-reduced-motion: reduce` disables nav transitions
 
 ### JavaScript
 
-- Inline `<script>` at bottom of `index.html` — no separate JS file today
-- DOM queries by ID, event listeners, async `fetch` to Formspree
-- reCAPTCHA shown only after all form fields filled (`updateRecaptchaVisibility`)
+- Inline `<script>` at bottom of `index.html` — no separate JS file today (~160 lines)
+- Dynamic copyright year in footer
+- Floating nav toggle on scroll (`requestAnimationFrame`-throttled)
+- Hamburger menu toggle + close on link click
+- Desktop scroll-spy active nav (`.is-active` class, `aria-current="location"`, breakpoint `1025px`)
+- Contact form: conditional reCAPTCHA visibility (`updateRecaptchaVisibility`), async `fetch` to Formspree, `aria-live` status feedback
 
 ### Assets
 
@@ -150,6 +162,7 @@ See [README.md](README.md) for step-by-step local dev and deployment instruction
 - When editing portfolio copy or structure in `index.html`, update `index.html.md` and `llms.txt` in the same pass — do not leave them stale
 - After any content/structure edit: spot-check `llms.txt` and `index.html.md` reflect the same facts and section anchors as `index.html`
 - When adding a new crawlable page or materially updating an existing one, update `sitemap.xml` (`<lastmod>` at minimum; new `<url>` entry for new pages)
+- When a change may affect project docs, include a **Documentation impact** note (see § Documentation maintenance) and ask before editing README/CLAUDE
 
 ### Never
 
@@ -160,6 +173,20 @@ See [README.md](README.md) for step-by-step local dev and deployment instruction
 - Commit secrets that aren't already public client-side keys
 - Create commits or push unless explicitly asked
 - Duplicate README content into this file
+- Update `README.md` or `CLAUDE.md` without explicit user permission (except when the task explicitly includes doc updates)
+
+### Documentation maintenance
+
+When making changes to site code, content, structure, conventions, or agent workflow:
+
+1. **Do not silently edit** `README.md` or `CLAUDE.md` unless the user explicitly requested doc updates in the same task.
+2. **Before finishing** (agent mode) or **in every plan** (plan mode), include a **Documentation impact** subsection when applicable, listing:
+   - Which sections of `README.md` and/or `CLAUDE.md` may need updating
+   - Why (e.g. new JS behaviour, new file, convention change)
+3. **Ask the user for permission** before making those doc edits.
+4. **Exception:** when the task explicitly includes updating these files, proceed without a separate ask.
+
+This rule applies only to `README.md` and `CLAUDE.md`. LLM file sync (`index.html.md`, `llms.txt`) and sitemap updates follow the existing automatic rules above.
 
 ### When editing content
 
@@ -187,9 +214,16 @@ Not yet enforced — review and accept/reject before treating as canonical.
 - **[SUGGESTED] Commit messages:** Imperative, sentence-case (e.g. `Add volunteer section`, `Fix case study mobile padding`). Avoid kebab-case (`update-hero`).
 - **[SUGGESTED] External links:** Always add `rel="noopener noreferrer"` on `target="_blank"` links (currently inconsistent).
 - **[SUGGESTED] Image paths:** Standardize on relative `images/…` for portability; reserve absolute URLs for OG/Twitter meta only.
-- **[SUGGESTED] JS extraction:** If JS grows beyond ~80 lines, move to `js/main.js` — not needed today.
-- **[SUGGESTED] Pre-deploy checklist:** Nav (desktop + mobile), case study expand/collapse, contact form + reCAPTCHA, responsive at 640px/1024px, **WCAG AA contrast spot-check** on any changed colours (browser DevTools or [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)).
+- **[SUGGESTED] JS extraction:** Inline JS is ~160 lines today; consider moving to `js/main.js` if it grows further.
+- **[SUGGESTED] Pre-deploy checklist:** Nav (desktop + mobile), floating nav on scroll, scroll-spy active states at 1025px+, case study expand/collapse, contact form + reCAPTCHA, responsive at 640px/1024px, **WCAG AA contrast spot-check** on any changed colours (browser DevTools or [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/)).
 - **[SUGGESTED] Tooling:** Do not add ESLint/Prettier/CI unless the project grows significantly.
+
+## 404 page (`404.html`)
+
+- GitHub Pages serves this automatically for missing URLs
+- Reuses shared stylesheet (`css/styles.css`); minimal nav (brand link to `/` only)
+- `noindex` — do not add to sitemap or LLM files
+- Styles live in `css/styles.css` `/* ── 404 PAGE ── */` block
 
 ## Resume page (`resume/index.html`)
 
@@ -197,7 +231,8 @@ Not yet enforced — review and accept/reject before treating as canonical.
 - Uses the same CSS custom properties as the main site (copy values from `:root` in `css/styles.css` if tokens change)
 - Designed to fit on a single US Letter page when printed from Chrome
 - `resume/*.pdf` is gitignored — never commit built PDFs
-- Do not link from main site nav, sitemap.xml, llms.txt, or index.html.md
+- **Do link** from hero `.hero-links` (`href="resume/"`) — intentional, for visitors
+- **Do not link** from `.nav-links` / `.mobile-menu`, `sitemap.xml`, `llms.txt`, or `index.html.md`
 - When updating resume content, only edit `resume/index.html` — no LLM file sync required for this page
 - To verify layout: open in Chrome, Cmd+P, check "Save as PDF" preview shows single page with no clipping
 
