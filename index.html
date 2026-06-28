@@ -686,6 +686,26 @@
   // Dynamic copyright year
   document.getElementById('copy-year').textContent = new Date().getFullYear();
 
+  // Floating nav on scroll
+  const navWrapper = document.querySelector('.nav-wrapper');
+  const FLOAT_THRESHOLD = 8;
+  let navFloatScheduled = false;
+
+  function updateNavFloat() {
+    navFloatScheduled = false;
+    navWrapper.classList.toggle('nav-wrapper--floating', window.scrollY >= FLOAT_THRESHOLD);
+  }
+
+  function scheduleNavFloatUpdate() {
+    if (!navFloatScheduled) {
+      navFloatScheduled = true;
+      requestAnimationFrame(updateNavFloat);
+    }
+  }
+
+  window.addEventListener('scroll', scheduleNavFloatUpdate, { passive: true });
+  scheduleNavFloatUpdate();
+
   // Hamburger menu toggle
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
