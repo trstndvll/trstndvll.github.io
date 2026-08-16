@@ -1,0 +1,11 @@
+const COVER_LETTER = `Dear Hiring Manager,
+
+First paragraph of the letter goes here.
+
+Second paragraph.
+
+Thank you for your time,
+
+---
+
+Your Name`;
