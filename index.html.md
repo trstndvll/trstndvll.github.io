@@ -5,6 +5,7 @@ Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-s
 - [Email](mailto:trstndvll@gmail.com)
 - [GitHub](https://github.com/trstndvll)
 - [LinkedIn](https://linkedin.com/in/trstndvll)
+- Resume: [For Humans](resume/) (two-column print layout) · [For Robots](resume/ats/) (single-column ATS layout)
 
 ## About Me
 
@@ -29,7 +30,6 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 - BI & Data Analysis
 - Competitor Analysis
 - Customer Interviews
-- Product Governance
 
 ### Technical Skills
 
@@ -43,11 +43,11 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 
 ### Tools
 
-- Atlassian
 - AWS
 - Figma
 - GitHub
 - Hotjar
+- Jira
 - Metabase
 - Mixpanel
 - Notion
