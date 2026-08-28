@@ -37,7 +37,12 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 | `README.md` | Human-facing intro, local dev, deployment |
 | `.cursor/rules/` | Cursor always-applied rules — points agents at CLAUDE.md |
 | `.gitignore` | Ignores `.DS_Store` |
-| `resume/index.html` | Self-contained print resume — own `<style>` block, same design tokens, exports to PDF via Chrome print |
+| `resume/resume-data.js` | Single source of truth for all resume content — edit here, not HTML |
+| `resume/resume-shared.js` | Shared render helpers used by both resume layouts |
+| `resume/index.html` | Two-column print resume (fancy) — own `<style>` block, data-driven via `render-fancy.js` |
+| `resume/render-fancy.js` | Populates fancy resume mount points from `resumeData` |
+| `resume/ats/index.html` | Single-column ATS resume — own `<style>` block, data-driven via `render-ats.js` |
+| `resume/ats/render-ats.js` | Populates ATS resume mount points from `resumeData` |
 
 ## Accessibility — WCAG AA
 
@@ -225,16 +230,28 @@ Not yet enforced — review and accept/reject before treating as canonical.
 - `noindex` — do not add to sitemap or LLM files
 - Styles live in `css/styles.css` `/* ── 404 PAGE ── */` block
 
-## Resume page (`resume/index.html`)
+## Resume pages
 
-- Self-contained: all styles are in an inline `<style>` block — do not import `css/styles.css`
+Two resume layouts share `resume/resume-data.js`:
+
+| Page | Path | Layout |
+|------|------|--------|
+| Fancy (humans) | `resume/index.html` | Two-column, fixed Letter page |
+| ATS (robots) | `resume/ats/index.html` | Single-column, optimized for PDF text extraction |
+
+Supporting files: `resume/resume-shared.js`, `resume/render-fancy.js`, `resume/ats/render-ats.js`.
+
+- Self-contained styles in each HTML file — do not import `css/styles.css`
 - Uses the same CSS custom properties as the main site (copy values from `:root` in `css/styles.css` if tokens change)
-- Designed to fit on a single US Letter page when printed from Chrome
+- **Edit content in `resume/resume-data.js` only** — not HTML. Optional `includeInAts: false` on `selectedWork` entries hides them from the ATS version only.
+- Fancy resume is designed to fit on a single US Letter page when printed from Chrome
+- ATS resume may flow to two pages; do not force single-page with overflow hidden
 - `resume/*.pdf` is gitignored — never commit built PDFs
-- **Do link** from hero `.hero-links` (`href="resume/"`) — intentional, for visitors
+- **Do link** from hero `.hero-links` via `<details>` dropdown: **For Humans** (`resume/`), **For Robots** (`resume/ats/`)
 - **Do not link** from `.nav-links` / `.mobile-menu`, `sitemap.xml`, `llms.txt`, or `index.html.md`
-- When updating resume content, only edit `resume/index.html` — no LLM file sync required for this page
-- To verify layout: open in Chrome, Cmd+P, check "Save as PDF" preview shows single page with no clipping
+- No LLM file sync required for resume pages when content changes (resume is excluded from `index.html.md` / `llms.txt`)
+- To verify fancy layout: open in Chrome, Cmd+P, check single page with no clipping
+- To verify ATS layout: print to PDF, run `pdftotext` — sections should read top-to-bottom without interleaving
 
 ## Where README is the better reference
 

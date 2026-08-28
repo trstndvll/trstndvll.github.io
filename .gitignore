@@ -1,2 +1,4 @@
 .DS_Store
 resume/*.pdf
+cover-letter/*.pdf
+cover-letter/content.js

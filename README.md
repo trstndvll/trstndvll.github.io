@@ -126,13 +126,45 @@ If you changed portfolio copy or added/renamed sections, confirm `llms.txt`, `in
 
 ### Resume
 
-A print-ready resume page lives at `resume/index.html`. It uses the same design tokens as the main site and is intended to be opened in Chrome and saved as PDF via Cmd+P → Save as PDF.
+Two print-ready resume pages share one content file:
 
-The resume is linked from the hero section (`resume/`) but is intentionally excluded from nav, sitemap, and LLM files.
+| Path | Purpose |
+|------|---------|
+| `resume/resume-data.js` | **Edit here** — single source of truth for all resume content |
+| `resume/resume-shared.js` | Shared render helpers (contact icons, titles, bullets) |
+| `resume/index.html` + `resume/render-fancy.js` | Two-column layout for humans — print to PDF |
+| `resume/ats/index.html` + `resume/ats/render-ats.js` | Single-column ATS-safe layout — upload/print to PDF |
 
-PDFs are excluded from version control via `.gitignore` (`resume/*.pdf`). Distribute the PDF directly — do not host it publicly.
+The hero **Resume** dropdown links to both versions (`resume/` and `resume/ats/`). Resume pages are intentionally excluded from nav, sitemap, and LLM files.
 
-To export:
-1. Open `resume/index.html` in Chrome (via local server or directly)
+PDFs are excluded from version control via `.gitignore` (`resume/*.pdf`). Distribute PDFs directly — do not host them publicly.
+
+**To export (either version):**
+1. Run a local server (`python3 -m http.server 8000`) and open the page
 2. Cmd+P → Destination: Save as PDF → Paper size: Letter → Save
 3. Name the file descriptively (e.g. `tristan-douville-resume-2026.pdf`) and keep it locally
+
+Use the **For Humans** version for portfolio visitors and direct sharing. Use **For Robots** for ATS uploads — it omits some case studies (`includeInAts: false` in data) and uses a single-column layout for clean text extraction.
+
+### Cover letter
+
+A print-ready cover letter template lives at `cover-letter/index.html`. It reuses the resume page's design tokens and header/footer treatment. Letter body text is **not** in the HTML — it is loaded from `cover-letter/content.js`.
+
+**Local setup (first time):**
+
+```bash
+cp cover-letter/content.js.example cover-letter/content.js
+```
+
+Edit `cover-letter/content.js` and replace the `COVER_LETTER` string with your draft. Separate paragraphs with a blank line. Use `---` on its own line between your sign-off and name to leave space for a handwritten signature in the PDF.
+
+**Per application:** overwrite `content.js` with the letter for that role. The file is gitignored — it is never committed or published to GitHub Pages.
+
+The template (`index.html`) may be on the remote repo, but without `content.js` the live URL will not render letter text. The cover letter is excluded from nav, sitemap, and LLM files (same as the resume).
+
+PDFs are excluded from version control via `.gitignore` (`cover-letter/*.pdf`).
+
+To export:
+1. Run a local server (`python3 -m http.server 8000`) and open `http://localhost:8000/cover-letter/`
+2. Cmd+P → Destination: Save as PDF → Paper size: Letter → Save
+3. Keep the PDF locally — do not commit it

@@ -324,6 +324,66 @@ section + section { border-top: 1px solid var(--border); }
 .hero-link:hover { background: var(--blue-mid); text-decoration: none; }
 .hero-link svg { width: 14px; height: 14px; }
 
+/* ── HERO RESUME DROPDOWN ── */
+.hero-link-dropdown {
+  position: relative;
+}
+.hero-link-dropdown > summary {
+  list-style: none;
+  cursor: pointer;
+}
+.hero-link-dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+.hero-link-dropdown > summary::marker {
+  content: '';
+}
+.hero-link-dropdown > summary:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.hero-link-dropdown[open] > summary {
+  background: var(--blue-mid);
+}
+.hero-link-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  min-width: max(100%, 9.5rem);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow: hidden;
+}
+.hero-link-menu-item {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-dark); /* WCAG AA fix — was: var(--blue) */
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.hero-link-menu-item:last-child {
+  border-bottom: none;
+}
+.hero-link-menu-item:hover {
+  background: var(--blue-light);
+  text-decoration: none;
+}
+.hero-link-menu-item:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: -2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-link-menu-item {
+    transition: background 0.18s;
+  }
+}
+
 /* ── CARD ── */
 .card {
   background: var(--white);
