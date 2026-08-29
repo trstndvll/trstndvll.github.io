@@ -54,8 +54,27 @@ const ResumeShared = {
     return title;
   },
 
-  createRoleTitle: function (role, company, location) {
-    return ResumeShared.createTitleWithDetail(role + ' — ' + company, location);
+  createRoleTitle: function (role, company, location, companyUrl) {
+    var title = document.createElement('p');
+    title.className = 'exp-title';
+
+    var strong = document.createElement('strong');
+    strong.appendChild(document.createTextNode(role + ' — '));
+
+    if (companyUrl) {
+      var link = document.createElement('a');
+      link.href = companyUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.textContent = company;
+      strong.appendChild(link);
+    } else {
+      strong.appendChild(document.createTextNode(company));
+    }
+
+    title.appendChild(strong);
+    title.appendChild(document.createTextNode(' · ' + location));
+    return title;
   },
 
   createDateLine: function (dates) {

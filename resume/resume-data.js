@@ -2,7 +2,7 @@ const resumeData = {
   header: {
     name: "Tristan Douville",
     title: "Senior Product Manager",
-    bio: "Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. I work directly with executive leadership on strategy and I've built product functions from the ground up — hiring teams, designing operating models, and establishing processes that let development move fast. I've also built LLM-powered workflows. I'm looking for a Senior PM role where I can learn an entirely new domain with a team that's passionate and embraces experimentation."
+    bio: "Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. I work directly with executive leadership on strategy and I've built product functions from the ground up: hiring teams, designing operating models, and establishing processes that let development move fast. I've also built LLM-powered workflows. I'm looking for a Senior PM role where I can learn an entirely new domain with a team that's passionate and embraces experimentation."
   },
 
   contact: [
@@ -20,7 +20,7 @@ const resumeData = {
     },
     {
       title: "Creating Internal AI Knowledge Systems",
-      body: "Shipped a Slack-based AI assistant synthesizing PRDs, docs, repos, and BI to help internal teams ask questions about our product — handling <strong>hundreds of internal queries/month</strong> and eliminating recurring product team interruptions without added headcount."
+      body: "Shipped a Slack-based AI assistant synthesizing PRDs, docs, repos, and BI to help internal teams ask questions about our product, handling <strong>hundreds of internal queries/month</strong> and eliminating recurring product team interruptions without added headcount."
     },
     {
       title: "MVP Scope Discipline — Solving for the 95%",
@@ -41,6 +41,7 @@ const resumeData = {
   experience: [
     {
       company: "Pivott Software",
+      companyUrl: "https://pivott.io",
       role: "Senior Product Manager",
       location: "Victoria, BC",
       dates: "May 2025 – Present",
@@ -52,30 +53,32 @@ const resumeData = {
     },
     {
       company: "Pivott Software",
+      companyUrl: "https://pivott.io",
       role: "Product Manager",
       location: "Victoria, BC",
       dates: "Jan 2024 – May 2025",
       bullets: [
         "Led <strong>0→1 launch</strong> of a contract management SaaS platform from market analysis through to revenue in <strong>under a year</strong>.",
-        "Designed and executed a <strong>PLG strategy</strong> — freemium tiers, self-serve onboarding, and TTV optimizations — resulting in <strong>free-to-paid conversions</strong>.",
+        "Designed and executed a <strong>PLG strategy</strong> (freemium tiers, self-serve onboarding, and TTV optimizations) resulting in <strong>free-to-paid conversions</strong>.",
         "Built <strong>sandbox environment</strong> and sign-up workflow to demonstrate features and convert new users to freemium or paid."
       ]
     },
     {
       company: "PostEngine",
+      companyUrl: "https://postengine.com",
       role: "Product Manager",
       location: "Victoria, BC",
       dates: "April 2021 – Dec 2023",
       bullets: [
-        "Served as <strong>product owner and SME</strong> for a B2B SaaS marketing automation platform; owned roadmap and stakeholder relationships.",
-        "Spearheaded <strong>0→1 launches</strong> of multiple features applying agile MVP principles to reduce <strong>time-to-market</strong> and validate value hypotheses.",
-        "Established <strong>OKR &amp; KPI reporting</strong> — story point velocity, project budget tracking, and release cadence metrics."
+        "Owned product for a <strong>Chrome extension and desktop platform</strong> automating rental ad posting at scale, pulling live listings data and auto-publishing to Craigslist and other channels across <strong>3M+ ads annually</strong>.",
+        "Built <strong>cross-channel lead attribution</strong> connecting phone, email, text, and web inquiries back to the specific ad that generated them, turning ad performance into a number customers could actually act on.",
+        "Owned <strong>Property Portal</strong>, the customer-facing reporting product surfacing ad performance and exportable attribution data, in place of raw activity logs."
       ]
     }
   ],
 
   skills: {
-    "Product Leadership": ["Agile / Kanban / Scrum", "AI Strategy", "BI & Data Analysis", "Competitor Analysis", "Customer Interviews"],
+    "Product Leadership": ["Agile / Kanban / Scrum", "AI Strategy", "Attribution Modelling", "BI & Data Analysis", "Competitor Analysis", "Customer Interviews"],
     "Technical": ["Data Modelling", "HTML / CSS", "Prompt Engineering", "Python", "React", "SQL", "SR&ED", "TypeScript"],
     "Tools": ["AWS", "Figma", "GitHub", "Hotjar", "Jira", "Metabase", "Mixpanel", "Notion", "Zapier"],
     "AI & Automation": ["ChatGPT", "Claude", "Cursor", "Magic Patterns", "MCP", "n8n", "OpenAI API", "Vercel"]
@@ -94,7 +97,7 @@ const resumeData = {
       bullets: [
         "Mentored <strong>3 product managers</strong> across separate <strong>6-month engagements</strong> (Associate PM to PM).",
         "Held bi-weekly 1:1s focused on real-world product challenges, team dynamics, and <strong>career development</strong>.",
-        "Fostered a space for <strong>candid conversations</strong> — gave perspective without assuming solutions."
+        "Fostered a space for <strong>candid conversations</strong>, giving perspective without assuming solutions."
       ]
     }
   ],

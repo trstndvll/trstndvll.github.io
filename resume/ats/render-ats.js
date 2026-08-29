@@ -22,7 +22,7 @@
     resumeData.experience.forEach(function (item) {
       var article = document.createElement('article');
       article.className = 'work-card exp-entry';
-      article.appendChild(ResumeShared.createRoleTitle(item.role, item.company, item.location));
+      article.appendChild(ResumeShared.createRoleTitle(item.role, item.company, item.location, item.companyUrl));
       article.appendChild(ResumeShared.createDateLine(item.dates));
       ResumeShared.appendBulletsAsParagraphs(article, item.bullets);
       container.appendChild(article);

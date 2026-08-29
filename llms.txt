@@ -14,7 +14,7 @@ Tristan Douville is a product leader who works directly with executive leadershi
 
 ### Skills (summary)
 
-- **Product leadership:** Agile/Kanban/Scrum, AI strategy, BI & data analysis, competitor analysis, customer interviews
+- **Product leadership:** Agile/Kanban/Scrum, AI strategy, attribution modelling, BI & data analysis, competitor analysis, customer interviews
 - **Technical:** Python, SQL, TypeScript, HTML/CSS, data modelling, prompt engineering, SR&ED reporting
 - **Tools:** AWS, Figma, GitHub, Hotjar, Jira, Metabase, Mixpanel, Notion, Zapier
 - **AI & automation:** ChatGPT, Claude, Cursor, MCP, n8n, OpenAI API, Magic Patterns, Vercel
@@ -29,7 +29,7 @@ Tristan Douville is a product leader who works directly with executive leadershi
 
 **Pivott highlights:** Built product function from scratch; 0→1 contract management SaaS launch; PLG strategy with freemium tiers; agentic AI workflows; scaled engineering 5→8.
 
-**PostEngine highlights:** Product owner for B2B marketing automation SaaS; multiple 0→1 feature launches; agile delivery for 6 developers; OKR/KPI reporting.
+**PostEngine highlights:** Chrome extension and desktop platform for rental ad posting at scale (3M+ ads/year); cross-channel lead attribution; Property Portal reporting product.
 
 **Volunteering:** Mentor, ProductBC PM Mentorship Program (Sep 2024–present) — 3 mentees across 6-month engagements.
 

@@ -27,6 +27,7 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 
 - Agile, Kanban, & Scrum
 - AI Strategy
+- Attribution Modelling
 - BI & Data Analysis
 - Competitor Analysis
 - Customer Interviews
@@ -372,10 +373,9 @@ Team of 8 developers
 
 Team of 6 developers
 
-- **Served as product owner and SME for PostEngine**, a B2B SaaS marketing automation platform. Owned roadmap and stakeholder relationships.
-- **Spearheaded 0→1 launch of multiple features**, applying MVP principles to reduce time-to-market and validate value hypotheses.
-- **Led agile delivery for a team of 6 developers**; conducted backlog refinement, sprint planning, estimation, and retrospectives.
-- **Established OKR & KPI reporting** for the product team, including story point velocity, project budget tracking, and release cadence.
+- **Owned product for a Chrome extension and desktop platform** automating rental ad posting at scale, pulling live listings data and auto-publishing to Craigslist and other channels across 3M+ ads annually.
+- **Built cross-channel lead attribution** connecting phone, email, text, and web inquiries back to the specific ad that generated them, turning ad performance into a number customers could actually act on.
+- **Owned Property Portal**, the customer-facing reporting product surfacing ad performance and exportable attribution data, in place of raw activity logs.
 
 ## Volunteering
 

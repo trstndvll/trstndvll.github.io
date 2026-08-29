@@ -29,7 +29,7 @@
 
       var header = document.createElement('div');
       header.className = 'exp-header';
-      header.appendChild(ResumeShared.createRoleTitle(item.role, item.company, item.location));
+      header.appendChild(ResumeShared.createRoleTitle(item.role, item.company, item.location, item.companyUrl));
       var date = document.createElement('span');
       date.className = 'exp-date';
       date.textContent = item.dates;
