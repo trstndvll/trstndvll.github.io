@@ -158,9 +158,9 @@
 
     function buildSignatureTable(absolute) {
       const A = assets(absolute);
-      return `<!--[if mso]><table width="440" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
-<table cellpadding="0" cellspacing="0" border="0" width="440"
-  style="width:440px;max-width:100%;font-family:Arial,Helvetica,sans-serif;
+      return `<!--[if mso]><table width="450" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="450"
+  style="width:450px;max-width:100%;font-family:Arial,Helvetica,sans-serif;
          background-color:#ffffff;border-radius:10px;
          border:1px solid #c5d8f8;overflow:hidden;
          box-shadow:0 2px 12px rgba(26,107,214,0.07);">
@@ -203,23 +203,39 @@
 
       <table cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td valign="middle" style="padding:0 5px 0 0;line-height:0;">
-            <img src="${A.mail}" width="14" height="14" alt=""
-                 style="display:block;border:none;width:14px;height:14px;" />
+          <td valign="middle" style="padding:0 0 8px 0;">
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="20" valign="middle" style="padding:0 6px 0 0;line-height:0;">
+                  <img src="${A.mail}" width="14" height="14" alt=""
+                       style="display:block;border:none;width:14px;height:14px;" />
+                </td>
+                <td valign="middle">
+                  <a href="mailto:trstndvll@gmail.com"
+                     style="font-size:13px;color:#374151;text-decoration:none;
+                            font-family:Arial,Helvetica,sans-serif;line-height:14px;
+                            white-space:nowrap;">trstndvll@gmail.com</a>
+                </td>
+              </tr>
+            </table>
           </td>
-          <td valign="middle" style="padding:0 10px 0 0;">
-            <a href="mailto:trstndvll@gmail.com"
-               style="font-size:13px;color:#374151;text-decoration:none;
-                      font-family:Arial,Helvetica,sans-serif;line-height:14px;">trstndvll@gmail.com</a>
-          </td>
-          <td valign="middle" style="padding:0 5px 0 0;line-height:0;">
-            <img src="${A.phone}" width="14" height="14" alt=""
-                 style="display:block;border:none;width:14px;height:14px;" />
-          </td>
+        </tr>
+        <tr>
           <td valign="middle" style="padding:0;">
-            <a href="tel:778-678-4111"
-               style="font-size:13px;color:#374151;text-decoration:none;
-                      font-family:Arial,Helvetica,sans-serif;line-height:14px;">778-678-4111</a>
+            <table cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td width="20" valign="middle" style="padding:0 6px 0 0;line-height:0;">
+                  <img src="${A.phone}" width="14" height="14" alt=""
+                       style="display:block;border:none;width:14px;height:14px;" />
+                </td>
+                <td valign="middle">
+                  <a href="tel:778-678-4111"
+                     style="font-size:13px;color:#374151;text-decoration:none;
+                            font-family:Arial,Helvetica,sans-serif;line-height:14px;
+                            white-space:nowrap;">778-678-4111</a>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
       </table>
