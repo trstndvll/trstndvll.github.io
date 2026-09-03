@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Email Signature — Tristan Douville</title>
+  <meta name="description" content="Personal email signature for Tristan Douville." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <style>
+    :root {
+      --blue: #1a6bd6;
+      --blue-dark: #1558b0; /* WCAG AA fix — was: var(--blue) */
+      --blue-light: #e8f0fc;
+      --blue-mid: #c5d8f8;
+      --dark: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --success: #15803d;
+      --radius-sm: 8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--blue-light);
+      color: var(--dark);
+      min-height: 100vh;
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 48px 24px;
+    }
+
+    button:focus-visible {
+      outline: 2px solid var(--blue);
+      outline-offset: 2px;
+    }
+
+    .main {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .preview-frame {
+      background: var(--white);
+      border: 1px solid var(--blue-mid);
+      border-radius: var(--radius-sm);
+      padding: 24px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--blue); }
+
+    .btn-primary.copied {
+      background: var(--success);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--blue-dark);
+      border: 1px solid var(--blue-mid);
+    }
+
+    .btn-secondary:hover {
+      background: var(--blue-mid);
+    }
+
+    .copy-status {
+      font-size: 13px;
+      color: var(--muted);
+      min-height: 1.2em;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .btn { transition: none; }
+      .btn:active { transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main">
+    <h1>Email Signature</h1>
+    <p class="note">
+      Click <em>Copy Signature</em>, then paste into Gmail
+      (Settings → See all settings → Signature). Or download the HTML file.
+      Outlook may show the top bar as solid dark blue; some clients alter colours in dark mode.
+    </p>
+    <div class="preview-frame" id="preview"></div>
+    <div class="actions">
+      <button type="button" class="btn btn-primary" id="copy-btn">Copy Signature</button>
+      <button type="button" class="btn btn-secondary" id="download-btn">Download HTML</button>
+      <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+
+  <script>
+    const ORIGIN = 'https://www.trstndvll.com';
+
+    function assets(absolute) {
+      const base = absolute ? ORIGIN : '..';
+      return {
+        photo: base + '/images/tristan.png',
+        phone: base + '/images/email-signature/phone.png',
+        mail: base + '/images/email-signature/mail.png',
+        linkedin: base + '/images/email-signature/linkedin.png',
+        github: base + '/images/email-signature/github.png',
+        site: base + '/images/email-signature/site.png',
+      };
+    }
+
+    function buildSignatureTable(absolute) {
+      const A = assets(absolute);
+      return `<!--[if mso]><table width="440" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+<table cellpadding="0" cellspacing="0" border="0" width="440"
+  style="width:440px;max-width:100%;font-family:Arial,Helvetica,sans-serif;
+         background-color:#ffffff;border-radius:10px;
+         border:1px solid #c5d8f8;overflow:hidden;
+         box-shadow:0 2px 12px rgba(26,107,214,0.07);">
+
+  <!-- Gradient top bar -->
+  <!-- bgcolor attr + background-color = Outlook fallback; background gradient = everyone else -->
+  <tr>
+    <td colspan="2" height="6" bgcolor="#1558b0"
+        style="height:6px;font-size:0;line-height:0;padding:0;
+               background-color:#1558b0;
+               background:linear-gradient(to right, #1558b0 0%, #1a6bd6 50%, #c5d8f8 100%);">
+      &nbsp;
+    </td>
+  </tr>
+
+  <!-- Main row -->
+  <tr>
+    <td width="124" valign="top" align="center"
+        style="width:124px;padding:20px 12px 20px 18px;">
+      <img src="${A.photo}" width="110" height="110" alt="Tristan Douville"
+           style="display:block;border:none;width:110px;height:110px;
+                  border-radius:12px;object-fit:cover;" />
+    </td>
+
+    <td valign="top" align="left" style="padding:20px 18px 20px 6px;">
+      <p style="margin:0 0 3px 0;padding:0;font-size:19px;font-weight:700;
+                color:#111827;font-family:Arial,Helvetica,sans-serif;line-height:23px;">
+        Tristan Douville
+      </p>
+      <p style="margin:0 0 14px 0;padding:0;font-size:13px;font-weight:600;
+                color:#1558b0;font-family:Arial,Helvetica,sans-serif;line-height:16px;">
+        Senior Product Manager
+      </p>
+
+      <table cellpadding="0" cellspacing="0" border="0" width="100%"
+             style="margin-bottom:11px;">
+        <tr><td height="1"
+                style="height:1px;background-color:#c5d8f8;font-size:0;line-height:0;">&nbsp;</td></tr>
+      </table>
+
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td valign="middle" style="padding:0 5px 0 0;line-height:0;">
+            <img src="${A.mail}" width="14" height="14" alt=""
+                 style="display:block;border:none;width:14px;height:14px;" />
+          </td>
+          <td valign="middle" style="padding:0 10px 0 0;">
+            <a href="mailto:trstndvll@gmail.com"
+               style="font-size:13px;color:#374151;text-decoration:none;
+                      font-family:Arial,Helvetica,sans-serif;line-height:14px;">trstndvll@gmail.com</a>
+          </td>
+          <td valign="middle" style="padding:0 5px 0 0;line-height:0;">
+            <img src="${A.phone}" width="14" height="14" alt=""
+                 style="display:block;border:none;width:14px;height:14px;" />
+          </td>
+          <td valign="middle" style="padding:0;">
+            <a href="tel:778-678-4111"
+               style="font-size:13px;color:#374151;text-decoration:none;
+                      font-family:Arial,Helvetica,sans-serif;line-height:14px;">778-678-4111</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+
+  <!-- Footer strip -->
+  <tr>
+    <td colspan="2"
+        style="padding:11px 18px;background-color:#e8f0fc;border-top:1px solid #c5d8f8;"
+        align="right">
+      <table cellpadding="0" cellspacing="0" border="0" align="right">
+        <tr>
+          <td valign="middle" style="padding:0 4px 0 0;">
+            <a href="https://linkedin.com/in/trstndvll" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <img src="${A.linkedin}" width="16" height="16" alt=""
+                   style="display:block;border:none;width:16px;height:16px;" />
+            </a>
+          </td>
+          <td valign="middle" style="padding:0 14px 0 0;">
+            <a href="https://linkedin.com/in/trstndvll" target="_blank" rel="noopener noreferrer"
+               style="font-size:12px;color:#374151;font-family:Arial,Helvetica,sans-serif;text-decoration:none;white-space:nowrap;">LinkedIn</a>
+          </td>
+          <td valign="middle" style="padding:0 4px 0 0;">
+            <a href="https://github.com/trstndvll" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <img src="${A.github}" width="16" height="16" alt=""
+                   style="display:block;border:none;width:16px;height:16px;" />
+            </a>
+          </td>
+          <td valign="middle" style="padding:0 14px 0 0;">
+            <a href="https://github.com/trstndvll" target="_blank" rel="noopener noreferrer"
+               style="font-size:12px;color:#374151;font-family:Arial,Helvetica,sans-serif;text-decoration:none;white-space:nowrap;">GitHub</a>
+          </td>
+          <td valign="middle" style="padding:0 4px 0 0;">
+            <a href="https://www.trstndvll.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+              <img src="${A.site}" width="16" height="16" alt=""
+                   style="display:block;border:none;width:16px;height:16px;" />
+            </a>
+          </td>
+          <td valign="middle" style="padding:0;">
+            <a href="https://www.trstndvll.com/" target="_blank" rel="noopener noreferrer"
+               style="font-size:12px;color:#374151;font-family:Arial,Helvetica,sans-serif;text-decoration:none;white-space:nowrap;">trstndvll.com</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--[if mso]></td></tr></table><![endif]-->`;
+    }
+
+    function buildSignatureDocument() {
+      return `<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"></head>
+<body style="margin:0;padding:0;">
+${buildSignatureTable(true)}
+</body>
+</html>`;
+    }
+
+    function plainTextFromSignature() {
+      return [
+        'Tristan Douville',
+        'Senior Product Manager',
+        'trstndvll@gmail.com',
+        '778-678-4111',
+        'LinkedIn: https://linkedin.com/in/trstndvll',
+        'GitHub: https://github.com/trstndvll',
+        'https://www.trstndvll.com/',
+      ].join('\n');
+    }
+
+    function setCopyFeedback(ok) {
+      const btn = document.getElementById('copy-btn');
+      const status = document.getElementById('copy-status');
+
+      if (ok) {
+        btn.classList.add('copied');
+        btn.textContent = 'Copied!';
+        status.textContent = 'Signature copied to clipboard.';
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.textContent = 'Copy Signature';
+          status.textContent = '';
+        }, 2500);
+        return;
+      }
+
+      status.textContent = 'Copy failed — select the preview and press ⌘C (Ctrl+C).';
+    }
+
+    async function copyViaClipboardApi(html) {
+      if (!navigator.clipboard || !window.ClipboardItem) return false;
+      const item = new ClipboardItem({
+        'text/html': new Blob([html], { type: 'text/html' }),
+        'text/plain': new Blob([plainTextFromSignature()], { type: 'text/plain' }),
+      });
+      await navigator.clipboard.write([item]);
+      return true;
+    }
+
+    function copyViaExecCommand(html) {
+      const holder = document.createElement('div');
+      holder.setAttribute('aria-hidden', 'true');
+      holder.style.cssText = 'position:fixed;left:-9999px;top:0;';
+      holder.innerHTML = html;
+      document.body.appendChild(holder);
+
+      const selection = window.getSelection();
+      const range = document.createRange();
+      range.selectNodeContents(holder);
+      selection.removeAllRanges();
+      selection.addRange(range);
+      const ok = document.execCommand('copy');
+      selection.removeAllRanges();
+      holder.remove();
+      return ok;
+    }
+
+    async function copySignature() {
+      const html = buildSignatureTable(true);
+      let ok = false;
+
+      try {
+        ok = await copyViaClipboardApi(html);
+      } catch (_) {
+        ok = false;
+      }
+
+      if (!ok) {
+        ok = copyViaExecCommand(html);
+      }
+
+      setCopyFeedback(ok);
+    }
+
+    function downloadSignature() {
+      const html = buildSignatureDocument();
+      const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'tristan-douville-email-signature.html';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    document.getElementById('preview').innerHTML = buildSignatureTable(false);
+    document.getElementById('copy-btn').addEventListener('click', copySignature);
+    document.getElementById('download-btn').addEventListener('click', downloadSignature);
+  </script>
+</body>
+</html>
