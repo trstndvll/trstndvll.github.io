@@ -27,7 +27,7 @@ Tristan Douville is a product leader who works directly with executive leadershi
 | Product Manager | Pivott Software | Jan 2024 – May 2025 |
 | Product Manager | PostEngine | Apr 2021 – Dec 2023 |
 
-**Pivott highlights:** Built product function from scratch; 0→1 contract management SaaS launch; PLG strategy with freemium tiers; agentic AI workflows; scaled engineering 5→8.
+**Pivott highlights:** Built product function from scratch; 0→1 contract management SaaS launch; PLG strategy with freemium tiers, pricing/packaging ownership, and attach-rate tracking; agentic AI OCR workflow for contract extraction at scale; multi-module SaaS roadmap; scaled engineering 5→8.
 
 **PostEngine highlights:** Chrome extension and desktop platform for rental ad posting at scale (3M+ ads/year); cross-channel lead attribution; Property Portal reporting product.
 
@@ -38,8 +38,8 @@ Tristan Douville is a product leader who works directly with executive leadershi
 ### Case studies (summary)
 
 1. **Building a Product Function from Scratch** — Designed full SDLC (17 phases); grew solo PM to 3-person team; 25% reduction in production bugs; enabled 0→1 platform launch at Pivott.
-2. **Protecting Velocity by Reducing Scope** — Scoped renewal-terms MVP to ~95% of real usage using session recordings, support tickets, and LLM analysis of OCR'd contracts; shipped on time; comprehensive approach deprioritized.
-3. **Rebuilding a Marketing Website for Team Velocity** — Led Webflow → Next.js/Vercel rebuild with AI-native tooling (Magic Patterns, Claude Code, Cursor); prototype in 1 week, launched in under 4 weeks; ~40% tooling cost reduction; enabled non-developer marketing contributions.
+2. **Protecting Velocity by Reducing Scope** — Scoped renewal-terms MVP to the vast majority of real usage using session recordings, support tickets, Metabase/Mixpanel data, paid interviews, and LLM analysis of OCR'd contracts; shipped on time; comprehensive approach deprioritized.
+3. **Rebuilding a Marketing Website for Team Velocity** — Led Webflow → Next.js/Vercel rebuild with AI-native tooling (Magic Patterns, Claude Code, Cursor); prototype in 1 week, launched in under 4 weeks; ~40% tooling cost reduction; 99% Lighthouse score and AEO; enabled non-developer marketing contributions.
 4. **Internal AI Knowledge System ("Product Concierge")** — Slack-based assistant synthesizing docs, PRDs, repos, and BI; handles hundreds of internal queries/month; reduced product team interruptions.
 5. **High-Value Client → 20% Revenue Lift** — Turned client workflow pain point into configurable platform MVP; delivered on fiscal year-end deadline; 20% YoY spend increase; unlocked expansion within account.
 

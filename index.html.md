@@ -34,10 +34,11 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 
 ### Technical Skills
 
-- Data Modeling
+- Data Modelling
 - HTML/CSS
 - Prompt Engineering
 - Python
+- React
 - SQL
 - SR&ED Reporting
 - TypeScript
@@ -120,9 +121,9 @@ Applied **CSPO frameworks** (planning poker, sprint rituals, backlog governance)
 - Operating model became the foundation for the **0→1 launch** of Pivott's core contract management platform
 - Established **scalable team and process infrastructure** that supported subsequent engineering growth from **5 to 8**
 
-### Protecting Velocity by Reducing Scope — Solving for the 95%
+### Protecting Velocity by Reducing Scope — Solving for the Vast Majority
 
-Scoped an MVP that covered ~95% of real customer needs and shipped on time. Avoided a months-long engineering detour by anchoring decisions in usage data, not hypothetical edge cases.
+Scoped an MVP that covered the vast majority of real customer needs and shipped on time. Avoided a months-long engineering detour by anchoring decisions in usage data, not hypothetical edge cases.
 
 #### Context
 
@@ -138,11 +139,11 @@ There was also internal misalignment — **leadership** favoured the more robust
 
 #### My Role
 
-- **Analyzed** **session recordings** and **support tickets** to understand real user behaviour
-- Used **LLMs** to review **OCR'd contract text** and identify patterns in **renewal terms**
-- Found that the **majority of users** had **simple, repeatable renewal patterns**
-- **Facilitated discussions** with leadership to refocus on **core user needs**
-- **Managed stakeholder expectations** during a decision conflict
+- **Analyzed** **session recordings** and **support tickets**, then used **LLMs** to review **OCR'd contract text** to identify patterns in **renewal terms**, finding that most users had **simple, repeatable patterns**
+- Pulled usage data from **Metabase** and **Mixpanel** to identify the customers creating the **highest volume of manual renewal tasks**
+- Ran **six paid customer interviews** ($50 gift cards) for unbiased feedback, partnering with the **UX designer** on high-fidelity **Magic Patterns** mockups
+- Tested the complex, fully flexible design head-to-head against a simplified, **calendar-paradigm MVP**; the simple version won clearly on **cognitive load**
+- **Facilitated discussions** with leadership to refocus on **core user needs** and **managed stakeholder expectations** during the decision conflict
 
 #### Key Decisions
 
@@ -160,7 +161,7 @@ Framed the solution as a test of user demand, keeping the door open for expansio
 
 #### Execution
 
-- Partnered with **engineering** to define a **lean, flexible recurrence system**
+- Partnered with **engineering** to refine the **PRD** and work through real technical complexity: **timezones**, **cloud-based cron scheduling**, and **recurrence edge cases**
 - Kept scope tightly aligned to **core use cases**
 - Instrumented the feature with **Mixpanel** to measure **adoption** and **usage patterns**
 - Led **internal enablement** and **external rollout** through documentation and customer education
@@ -168,7 +169,7 @@ Framed the solution as a test of user demand, keeping the door open for expansio
 #### Outcome
 
 - Feature launched successfully and **remains in active use**
-- Covered **~95%** of customer use cases, validating the **simplified approach**
+- Covers the **vast majority** of real-world customer use cases, validating the **simplified approach**
 - Avoided **significant engineering investment** in low-frequency edge cases
 - The **"comprehensive" solution** was **deprioritized indefinitely**, freeing capacity for **higher-impact roadmap items**
 
@@ -233,6 +234,7 @@ The explicit goal was a codebase that a Marketing Manager could actively contrib
 - **Two high-priority product launches unblocked** — previously stalled on the old platform, built and ready for content at launch
 - **All future pages follow a consistent, templated system** — new feature pages are a content swap, not a new project
 - **~40% reduction in monthly tooling costs** compared to Webflow site plan and workspace seat fees
+- Achieved a **99% Lighthouse score** and implemented **AEO** (answer engine optimization) for the new site
 
 ### Eliminating Team Bottlenecks — A Scalable, Internal AI Knowledge System
 
@@ -351,7 +353,8 @@ Designed the solution to support configurable workflows (fields, statuses, namin
 
 3-person product team, 8 developers
 
-- **Built and deployed agentic AI workflows** for automated data extraction, reducing manual processing time and enabling quick time-to-value.
+- **Built and deployed an agentic AI workflow** that reads contract PDFs via OCR and extracts key terms into structured, normalized data for tens of thousands of contracts a month.
+- **Ran the roadmap for Pivott's multi-module SaaS platform** end-to-end, taking products to market on multiple occasions.
 - **Collaborated directly with the CEO** to define product vision, translate business strategy into a prioritized roadmap, and identify new revenue opportunities.
 - **Designed a formal product–design–engineering operating model**, including hiring and onboarding a 3-person product team, establishing department processes, and managing professional development.
 - **Scaled the engineering team from 5 to 8** by hiring and onboarding 3 developers and a QA engineer, establishing agile best practices and team rituals from the ground up.
@@ -363,7 +366,7 @@ Designed the solution to support configurable workflows (fields, statuses, namin
 Team of 8 developers
 
 - **Led 0→1 launch of a contract management SaaS platform** from market analysis and ideation through to revenue in under a year.
-- **Designed and executed a product-led growth (PLG) strategy** including freemium tiers, self-serve onboarding, and TTV optimizations, resulting in free-to-paid customer conversions.
+- **Designed and executed a product-led growth (PLG) strategy** including freemium tiers, self-serve onboarding, and TTV optimizations, owning pricing and packaging and tracking conversion and attach rate.
 - **Implemented a sandbox environment and sign-up workflow** to demonstrate features to new users and convert them to freemium or paid.
 - **Ran go-to-market launches** alongside marketing; tracked feature adoption and release cadence weekly.
 

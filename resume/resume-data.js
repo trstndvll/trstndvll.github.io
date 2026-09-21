@@ -23,8 +23,8 @@ const resumeData = {
       body: "Shipped a Slack-based AI assistant synthesizing PRDs, docs, repos, and BI to help internal teams ask questions about our product, handling <strong>hundreds of internal queries/month</strong> and eliminating recurring product team interruptions without added headcount."
     },
     {
-      title: "MVP Scope Discipline — Solving for the 95%",
-      body: "Scoped an MVP from session recordings and LLM-analyzed contracts covering <strong>~95%</strong> of renewal cases; shipped on time, sidestepping a months-long edge-case detour.",
+      title: "MVP Scope Discipline — Solving for the Vast Majority",
+      body: "Scoped an MVP from session recordings and LLM-analyzed contracts covering the <strong>vast majority</strong> of renewal cases; shipped on time, sidestepping a months-long edge-case detour.",
       includeInAts: false
     },
     {
@@ -46,7 +46,7 @@ const resumeData = {
       location: "Victoria, BC",
       dates: "May 2025 – Present",
       bullets: [
-        "Built and deployed <strong>agentic AI workflows</strong> for automated data extraction, reducing <strong>manual processing time</strong> and enabling quick time-to-value.",
+        "Built and deployed an <strong>agentic AI workflow</strong> that reads contract PDFs via <strong>OCR</strong> and extracts key terms into structured, normalized data for <strong>tens of thousands of contracts a month</strong>.",
         "Collaborated directly with the <strong>CEO</strong> to define product vision, translate business strategy into a prioritized roadmap, and identify <strong>new revenue opportunities</strong>.",
         "Designed a formal <strong>product–design–engineering operating model</strong>; hired and onboarded a <strong>3-person product team</strong> and scaled engineering from <strong>5 to 8</strong>."
       ]
@@ -59,7 +59,7 @@ const resumeData = {
       dates: "Jan 2024 – May 2025",
       bullets: [
         "Led <strong>0→1 launch</strong> of a contract management SaaS platform from market analysis through to revenue in <strong>under a year</strong>.",
-        "Designed and executed a <strong>PLG strategy</strong> (freemium tiers, self-serve onboarding, and TTV optimizations) resulting in <strong>free-to-paid conversions</strong>.",
+        "Designed and executed a <strong>PLG strategy</strong> (freemium tiers, self-serve onboarding, and TTV optimizations), owning <strong>pricing and packaging</strong> and tracking <strong>conversion and attach rate</strong>.",
         "Built <strong>sandbox environment</strong> and sign-up workflow to demonstrate features and convert new users to freemium or paid."
       ]
     },
