@@ -1,4 +1,5 @@
 .DS_Store
-resume/*.pdf
+resume/**/*.pdf
+resume-variants/
 cover-letter/*.pdf
 cover-letter/content.js

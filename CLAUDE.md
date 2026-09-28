@@ -36,13 +36,17 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 | `404.html` | GitHub Pages custom 404 — `noindex`, reuses `css/styles.css` |
 | `README.md` | Human-facing intro, local dev, deployment |
 | `.cursor/rules/` | Cursor always-applied rules — points agents at CLAUDE.md |
-| `.gitignore` | Ignores `.DS_Store` |
+| `.gitignore` | Ignores `.DS_Store`, resume/cover-letter PDFs, `resume-variants/`, local cover-letter content |
 | `resume/resume-data.js` | Single source of truth for all resume content — edit here, not HTML |
-| `resume/resume-shared.js` | Shared render helpers used by both resume layouts |
-| `resume/index.html` | Two-column print resume (fancy) — own `<style>` block, data-driven via `render-fancy.js` |
-| `resume/render-fancy.js` | Populates fancy resume mount points from `resumeData` |
-| `resume/ats/index.html` | Single-column ATS resume — own `<style>` block, data-driven via `render-ats.js` |
-| `resume/ats/render-ats.js` | Populates ATS resume mount points from `resumeData` |
+| `resume/resume-shared.js` | Shared render helpers used by the resume page |
+| `resume/index.html` | Single-column print resume — own `<style>` block, data-driven via `render.js` |
+| `resume/render.js` | Populates resume mount points; `?mode=full\|compact` and optional `?variant=` |
+| `resume/merge.js` | Deep-merge utility for layering local variants onto canonical data |
+| `resume/local-variants.js` | Name registry for localhost-only Resume dropdown links |
+| `resume/VARIANTS.md` | How to create and render per-application variants locally |
+| `resume/verify-extract.sh` | Chrome headless → PDF → `pdftotext`; required after creating/editing a variant |
+| `resume/ats/index.html` | Redirect to `resume/?mode=compact` (legacy URL) |
+| `resume-variants/` | Local-only tailored content — gitignored, never published |
 
 ## Accessibility — WCAG AA
 
@@ -232,27 +236,27 @@ Not yet enforced — review and accept/reject before treating as canonical.
 
 ## Resume pages
 
-Two resume layouts share `resume/resume-data.js`:
+One single-column resume page shares `resume/resume-data.js`:
 
-| Page | Path | Layout |
-|------|------|--------|
-| Fancy (humans) | `resume/index.html` | Two-column, fixed Letter page |
-| ATS (robots) | `resume/ats/index.html` | Single-column, optimized for PDF text extraction |
+| Mode | URL | Content |
+|------|-----|---------|
+| Full (default) | `resume/` or `resume/?mode=full` | All Selected Work; multi-page OK |
+| Compact | `resume/?mode=compact` | Omits `includeInAts: false` Selected Work; single-page target |
 
-Supporting files: `resume/resume-shared.js`, `resume/render-fancy.js`, `resume/ats/render-ats.js`.
+Supporting files: `resume/resume-shared.js`, `resume/render.js`, `resume/merge.js`.
 
-- Self-contained styles in each HTML file — do not import `css/styles.css`
+- Self-contained styles in `resume/index.html` — do not import `css/styles.css`
 - Uses the same CSS custom properties as the main site (copy values from `:root` in `css/styles.css` if tokens change)
-- **Edit content in `resume/resume-data.js` only** — not HTML. Optional `includeInAts: false` on `selectedWork` entries hides them from the ATS version only.
-- Fancy resume is designed to fit on a single US Letter page when printed from Chrome
-- ATS resume may flow to two pages; do not force single-page with overflow hidden
-- `resume/*.pdf` is gitignored — never commit built PDFs
-- **Do link** from hero `.hero-links` via `<details>` dropdown: **For Humans** (`resume/`), **For Robots** (`resume/ats/`)
-- **Do not link** from `.nav-links` / `.mobile-menu`, `sitemap.xml`, `llms.txt`, or `index.html.md`
-- No LLM file sync required for resume pages when content changes (resume is excluded from `index.html.md` / `llms.txt`)
-- To verify fancy layout: open in Chrome, Cmd+P, check single page with no clipping
-- To verify ATS layout: print to PDF, run `pdftotext` — sections should read top-to-bottom without interleaving
-
+- **Edit canonical content in `resume/resume-data.js` only** — not HTML. Optional `includeInAts: false` on `selectedWork` entries hides them from **compact** mode only
+- Single-column DOM order for clean PDF text extraction (`pdftotext` should read top-to-bottom)
+- `resume/**/*.pdf` and `resume-variants/` are gitignored — never commit built PDFs or tailored variants
+- Per-application variants: see [`resume/VARIANTS.md`](resume/VARIANTS.md). Load with `?variant=<name>` locally only; live deploy never passes `variant`
+- **After creating or editing a variant:** run `./resume/verify-extract.sh full <name>` (requires local server, Chrome, `pdftotext` via `brew install poppler`) and confirm extracted text is top-to-bottom and matches intended copy. Summarize results when an agent creates the variant.
+- **Do link** from hero `.hero-links` via `<details>` dropdown: **Full** (`resume/`), **Compact** (`resume/?mode=compact`); localhost also injects links from `resume/local-variants.js`
+- Legacy `/resume/ats/` redirects to `resume/?mode=compact`
+- **Do not link** from `.nav-links` / `.mobile-menu`, `sitemap.xml`, `llms.txt`, or `index.html.md` (aside from the hero mirror line in `index.html.md`)
+- No LLM file sync required when only resume content changes
+- To verify: `./resume/verify-extract.sh` — sections should read top-to-bottom without column interleaving
 ## Where README is the better reference
 
 - Clone and setup instructions

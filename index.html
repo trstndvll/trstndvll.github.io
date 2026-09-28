@@ -92,9 +92,9 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>
               Resume
             </summary>
-            <div class="hero-link-menu">
-              <a class="hero-link-menu-item" href="resume/">For Humans</a>
-              <a class="hero-link-menu-item" href="resume/ats/">For Robots</a>
+            <div class="hero-link-menu" id="resume-menu">
+              <a class="hero-link-menu-item" href="resume/">Full</a>
+              <a class="hero-link-menu-item" href="resume/?mode=compact">Compact</a>
             </div>
           </details>
         </div>
@@ -690,9 +690,27 @@
   </div>
 </section>
 
+<script src="resume/local-variants.js"></script>
 <script>
   // Dynamic copyright year
   document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+  // Localhost-only resume variant links (content is gitignored)
+  (function injectLocalResumeVariants() {
+    var host = window.location.hostname;
+    if (host !== 'localhost' && host !== '127.0.0.1' && host !== '[::1]') return;
+    var variants = window.RESUME_LOCAL_VARIANTS;
+    if (!Array.isArray(variants) || !variants.length) return;
+    var menu = document.getElementById('resume-menu');
+    if (!menu) return;
+    variants.forEach(function (entry) {
+      var a = document.createElement('a');
+      a.className = 'hero-link-menu-item';
+      a.href = 'resume/?mode=full&variant=' + encodeURIComponent(entry.name);
+      a.textContent = entry.label || entry.name;
+      menu.appendChild(a);
+    });
+  })();
 
   // Floating nav on scroll
   const navWrapper = document.querySelector('.nav-wrapper');

@@ -1,4 +1,4 @@
-const resumeData = {
+var resumeData = {
   header: {
     name: "Tristan Douville",
     title: "Senior Product Manager",

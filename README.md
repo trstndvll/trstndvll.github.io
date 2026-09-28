@@ -126,26 +126,35 @@ If you changed portfolio copy or added/renamed sections, confirm `llms.txt`, `in
 
 ### Resume
 
-Two print-ready resume pages share one content file:
+One single-column print resume, driven by shared data:
 
 | Path | Purpose |
 |------|---------|
-| `resume/resume-data.js` | **Edit here** — single source of truth for all resume content |
+| `resume/resume-data.js` | **Edit here** — single source of truth for canonical resume content |
 | `resume/resume-shared.js` | Shared render helpers (contact icons, titles, bullets) |
-| `resume/index.html` + `resume/render-fancy.js` | Two-column layout for humans — print to PDF |
-| `resume/ats/index.html` + `resume/ats/render-ats.js` | Single-column ATS-safe layout — upload/print to PDF |
+| `resume/index.html` + `resume/render.js` | Single-column layout — print to PDF |
+| `resume/merge.js` | Deep-merge for local per-application variants |
+| `resume/VARIANTS.md` | How to create and render tailored variants locally |
+| `resume/verify-extract.sh` | Headless Chrome → PDF → `pdftotext` order check |
 
-The hero **Resume** dropdown links to both versions (`resume/` and `resume/ats/`). Resume pages are intentionally excluded from nav, sitemap, and LLM files.
+**Modes** (query string on `resume/`):
 
-PDFs are excluded from version control via `.gitignore` (`resume/*.pdf`). Distribute PDFs directly — do not host them publicly.
+| Mode | URL | Use when |
+|------|-----|----------|
+| Full (default) | `resume/` | Portfolio visitors and direct sharing — all Selected Work |
+| Compact | `resume/?mode=compact` | Shorter PDF — omits case studies marked `includeInAts: false` |
 
-**To export (either version):**
-1. Run a local server (`python3 -m http.server 8000`) and open the page
-2. Cmd+P → Destination: Save as PDF → Paper size: Letter → Save
-3. Name the file descriptively (e.g. `tristan-douville-resume-2026.pdf`) and keep it locally
+The hero **Resume** dropdown links to Full and Compact. On localhost only, it also lists variants registered in `resume/local-variants.js`. Resume pages are intentionally excluded from nav, sitemap, and LLM files (aside from a brief hero mirror in `index.html.md`).
 
-Use the **For Humans** version for portfolio visitors and direct sharing. Use **For Robots** for ATS uploads — it omits some case studies (`includeInAts: false` in data) and uses a single-column layout for clean text extraction.
+PDFs and `resume-variants/` are excluded from version control via `.gitignore`. Distribute PDFs directly — do not host them publicly. Tailored application content stays local.
 
+**To export / verify extract order:**
+1. Run a local server (`python3 -m http.server 8000`)
+2. Install once if needed: `brew install poppler` (and Google Chrome for headless print)
+3. `./resume/verify-extract.sh full` or `./resume/verify-extract.sh full abebooks` — confirms top-to-bottom section order via `pdftotext`
+4. Optionally Cmd+P → Save as PDF for a final visual check; keep PDFs local
+
+Legacy URL `/resume/ats/` redirects to the compact mode.
 ### Cover letter
 
 A print-ready cover letter template lives at `cover-letter/index.html`. It reuses the resume page's design tokens and header/footer treatment. Letter body text is **not** in the HTML — it is loaded from `cover-letter/content.js`.
