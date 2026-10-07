@@ -532,6 +532,31 @@ details.case-study {
 .case-study[open] .case-study-summary-subheading {
   display: none;
 }
+.case-study-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.35rem;
+  margin-top: 0.2rem;
+}
+.case-study-tag {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+  color: var(--blue-dark);
+  background: var(--blue-light);
+  border: 1px solid var(--blue-mid);
+  border-radius: 99px;
+  padding: 0.15rem 0.6rem;
+}
 .case-study-chevron {
   flex-shrink: 0;
   align-self: center;

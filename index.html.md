@@ -1,6 +1,6 @@
-# Tristan Douville — Senior Product Manager
+# Tristan Douville, Senior Product Manager
 
-Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. I work directly with executive leadership on strategy and I've built product functions from the ground up — hiring teams, designing operating models, and establishing processes that let development move fast. I also build LLM-powered workflows and AI product discovery tools.
+Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-stage scale. I oversaw product improvements that saw revenue 20x. I work directly with executive leadership on strategy and I've built product functions from the ground up: hiring teams, designing operating models, and establishing processes that let development move fast. I also build LLM-powered workflows.
 
 - [Email](mailto:trstndvll@gmail.com)
 - [GitHub](https://github.com/trstndvll)
@@ -15,7 +15,7 @@ After studying computer science and technical writing I started my career in IT 
 
 ### What I Enjoy
 
-I thrive building 0→1 products — taking ambiguous problems through discovery, defining the right scope, and shipping solutions that drive real customer value and user delight. I especially love being a translator between technical and non-technical teams.
+I thrive building 0→1 products: taking ambiguous problems through discovery, defining the right scope, and shipping solutions that drive real customer value and user delight. I especially love being a translator between technical and non-technical teams.
 
 ### What's Next
 
@@ -72,282 +72,331 @@ I'm looking for a Senior PM or Lead PM role at a growth-stage small business or 
 
 Designed and shipped a full SDLC from the ground up; solo PM to 3-person team. 25% reduction in production bugs. Partnered with leadership to shift engineering to a startup mentality, laying foundations for a 0→1 platform launch.
 
+Themes: Process design · 0→1 · Risk decrease
+
 #### Context
 
-When I joined Pivott, there was **no product function** — no process, no team, and no defined way of taking work from idea to shipped. The engineering team was experienced and capable, but had come from a **stable, profitable business** where the primary mode was **maintenance and incremental improvement**. The mandate was to build a **brand-new SaaS product at startup pace**.
+When I joined Pivott, there was no product function. No process, no team, and no path from idea to shipped. Engineering was experienced, but it had come from a stable, profitable business built around maintenance. The mandate was a new SaaS product at startup pace.
 
 #### Problem
 
-Launching a **0→1 product** without a product function isn't just a process gap — it's a **structural risk**. Without defined ownership, prioritization, and delivery workflows, teams default to **ad hoc decisions**, **unclear requirements**, and **reactive engineering**.
+A **0→1 launch** without a product function is a structural risk. Work defaults to ad hoc decisions, unclear requirements, and reactive engineering.
 
-**Core tension:** Move fast enough to build a competitive product while establishing the process rigor needed to sustain it.
+**Core tension:** Move fast enough to compete, and still build the process that can sustain it.
 
-There was also a cultural challenge: the engineering team's instincts were calibrated for **stability, not speed**, and process change without credibility rarely sticks.
+The team's instincts were set for stability, not speed. Process change without credibility rarely sticks.
 
 #### My Role
 
-- **Assessed the full gap** between where the team was operating and what a startup delivery model required
-- **Designed a complete SDLC** spanning idea submission through to post-release review and success monitoring
-- Leveraged my **CSPO certification** to bring in proven agile frameworks and external perspectives on team rituals
+- **Assessed the gap** between how the team worked and what a startup delivery model required
+- **Designed a complete SDLC** from idea submission through post-release review
+- **Used my CSPO certification** to bring in agile frameworks and an outside view of team rituals
 - **Built the business case** for dedicated product and QA hires
-- **Partnered directly with the CEO** to secure the backing needed to drive cultural change with the engineering team
+- **Partnered with the CEO** so the cultural shift had executive backing
 
 #### Key Decisions
 
 **1. Design the full lifecycle before hiring**
 
-Rather than hiring first and figuring out process later, I mapped the complete SDLC — **17 phases** from idea submission to review and success monitoring — before growing the team. This gave new hires a **functioning system from day one**.
+I mapped **17 phases**, from idea submission to review and success monitoring, before growing the team. New hires started inside a working system.
 
 **2. Secure CEO alignment before rolling out to engineering**
 
-Given the cultural gap, I recognized that process changes needed to come with **executive weight** behind them. Getting the CEO aligned first meant the shift wasn't just a PM's opinion — it was **company direction**.
+The cultural gap meant a process change needed executive weight. With the CEO aligned first, the shift was company direction, not only a PM's opinion.
 
 **3. Use certification frameworks as a starting point, not a constraint**
 
-Applied **CSPO frameworks** (planning poker, sprint rituals, backlog governance) as a baseline, then adapted them to **Pivott's stage and team dynamics** rather than implementing them by the book.
+Planning poker, sprint rituals, and backlog governance were the baseline. I adapted them to Pivott's stage instead of applying them by the book.
 
 #### Execution
 
-- **Designed and documented a full SDLC** covering idea submission, prioritization, requirements, design, hand-off, development, testing, release, and post-launch review
-- **Hired and onboarded** a PM, a product designer, and a QA engineer — growing from a **solo PM to a 3-person product team**
-- **Established agile best practices** and team rituals from the ground up
-- Introduced **Jira-based defect tracking** to create a measurable quality baseline
+- Documented the SDLC: idea submission, prioritization, requirements, design, hand-off, development, testing, release, and post-launch review
+- Hired and onboarded a PM, a product designer, and a QA engineer. Solo PM to a **3-person product team**
+- Established agile practices and team rituals from the ground up
+- Introduced **Jira defect tracking** so quality had a measurable baseline
 
 #### Outcome
 
-- **Fully operational product function** built in under **6 months**
-- **Production bugs reduced by 25%** following introduction of QA and formal acceptance testing
-- Engineering team successfully transitioned from **maintenance-mode** to **startup delivery cadence**
-- Operating model became the foundation for the **0→1 launch** of Pivott's core contract management platform
-- Established **scalable team and process infrastructure** that supported subsequent engineering growth from **5 to 8**
-
-### Protecting Velocity by Reducing Scope — Solving for the Vast Majority
-
-Scoped an MVP that covered the vast majority of real customer needs and shipped on time. Avoided a months-long engineering detour by anchoring decisions in usage data, not hypothetical edge cases.
-
-#### Context
-
-Leadership proposed a new feature to help customers manage **renewal terms** within **contract documents** — a known **pain point** for users managing **long-term agreements**.
-
-#### Problem
-
-Initial designs aimed to model **every possible renewal scenario** across all document types. While comprehensive, this approach introduced **significant technical complexity**, a **high cognitive load** for end users, and a timeline that would delay a **widely-requested feature**.
-
-**Core tension:** Deliver a complete solution vs. deliver a usable solution quickly.
-
-There was also internal misalignment — **leadership** favoured the more robust approach.
-
-#### My Role
-
-- **Analyzed** **session recordings** and **support tickets**, then used **LLMs** to review **OCR'd contract text** to identify patterns in **renewal terms**, finding that most users had **simple, repeatable patterns**
-- Pulled usage data from **Metabase** and **Mixpanel** to identify the customers creating the **highest volume of manual renewal tasks**
-- Ran **six paid customer interviews** ($50 gift cards) for unbiased feedback, partnering with the **UX designer** on high-fidelity **Magic Patterns** mockups
-- Tested the complex, fully flexible design head-to-head against a simplified, **calendar-paradigm MVP**; the simple version won clearly on **cognitive load**
-- **Facilitated discussions** with leadership to refocus on **core user needs** and **managed stakeholder expectations** during the decision conflict
-
-#### Key Decisions
-
-**1. Reduce scope to match real usage**
-
-Prioritized a recurrence-based model covering the most common renewal scenarios. Avoided building for edge cases upfront.
-
-**2. Leverage known patterns**
-
-Drew from existing SaaS conventions and competitor solutions to reduce the user learning curve.
-
-**3. Position as an MVP**
-
-Framed the solution as a test of user demand, keeping the door open for expansion. This reduced resistance by aligning on iteration over perfection.
-
-#### Execution
-
-- Partnered with **engineering** to refine the **PRD** and work through real technical complexity: **timezones**, **cloud-based cron scheduling**, and **recurrence edge cases**
-- Kept scope tightly aligned to **core use cases**
-- Instrumented the feature with **Mixpanel** to measure **adoption** and **usage patterns**
-- Led **internal enablement** and **external rollout** through documentation and customer education
-
-#### Outcome
-
-- Feature launched successfully and **remains in active use**
-- Covers the **vast majority** of real-world customer use cases, validating the **simplified approach**
-- Avoided **significant engineering investment** in low-frequency edge cases
-- The **"comprehensive" solution** was **deprioritized indefinitely**, freeing capacity for **higher-impact roadmap items**
+- A working product function in under **6 months**
+- Production bugs down **25%** after QA and formal acceptance testing
+- Engineering moved from maintenance mode to a startup delivery cadence
+- That operating model became the base for the **0→1 launch** of the contract management platform
+- The same setup later supported engineering growth from **5 to 8**
 
 ### Rebuilding a Marketing Website for Team Velocity
 
 Led a full marketing site rebuild using AI-native tooling; prototype in 1 week, launched in under 4 weeks. Enabled non-developer marketing contributions for the first time and reduced monthly tooling costs by ~40%.
 
+Themes: AI · Speed increase · Cost decrease
+
 #### Context
 
-Pivott's marketing site was built on **Webflow** using a purchased template. Over time, the site's needs had grown well past what the platform handled well: the marketing team couldn't independently build new pages, custom interactions required developer involvement, and a planned **redesign** was quietly becoming harder to justify.
+Pivott's marketing site ran on Webflow, from a purchased template. Marketing could not build new pages on their own. Custom interactions needed a developer. A planned redesign was getting harder to justify.
 
-Meanwhile, the product had real content needs. **New feature landing pages were stalled.** A long-requested pricing page redesign — with collapsible comparison tables and an interactive plan structure — had been deferred repeatedly because the effort in Webflow made it not worth prioritizing.
+Feature landing pages were stalled. A pricing page, with collapsible comparison tables and an interactive plan structure, kept getting deferred. In Webflow, the effort was not worth prioritizing.
 
 #### Problem
 
-The root issue wasn't design quality — it was a **platform mismatch**. Webflow's visual editor handled basic copy changes, but broke down for anything structural. Adding a new component, building an interactive pricing layout, or launching a feature landing page each required either a developer or a Webflow specialist. Pivott had neither available for marketing work at this time.
+The constraint was the **platform**, not the design. Webflow handled basic copy. A new component, an interactive pricing layout, or a feature page each needed a developer or a Webflow specialist. Pivott had neither available for marketing work.
 
-**Core tension:** The marketing site needed to grow with the product, but every meaningful change was a project in its own right.
+**Core tension:** The site had to grow with the product, but every meaningful change was its own project.
 
-There was also a compounding risk: Webflow was retiring its **legacy editor**, forcing a workflow transition regardless — making the status quo a temporary solution at best.
+Webflow was also retiring its legacy editor. The status quo was temporary either way.
 
 #### My Role
 
-- **Identified the constraint proactively** before it became a blocker and built a concrete alternative before bringing it to leadership
-- **Built the business case** comparing Webflow and a React/Vercel stack across cost, capability, and long-term flexibility
-- **Led the full technical implementation** — repo setup, design system, component architecture, and deployment pipeline
-- **Established the AI-native design and build workflow** using Magic Patterns, Claude Code, and Cursor
-- **Designed the project plan** including content audit, infrastructure checklist, and DNS migration process
-- **Presented the prototype** to the CEO and Head of Sales and secured approval to move the 2027 redesign to 2026
+- **Spotted the constraint** and built an alternative before taking it to leadership
+- **Wrote the business case**: Webflow versus React on Vercel, across cost, capability, and flexibility
+- **Led the implementation**: repo, design system, components, and deployment
+- **Set up the AI-native workflow** with Magic Patterns, Claude Code, and Cursor
+- **Wrote the project plan**: content audit, infrastructure checklist, and DNS migration
+- **Showed the prototype** to the CEO and Head of Sales, and moved the 2027 redesign to 2026
 
 #### Key Decisions
 
-**1. Accelerate the 2027 redesign by over a year**
+**1. Pull the 2027 redesign forward by more than a year**
 
-The effort required to build a competent Webflow site was roughly equivalent to building in React — but with worse long-term outcomes. Framed this clearly for leadership and got the go-ahead to move immediately, collapsing a year-plus timeline into weeks.
+A competent Webflow rebuild was about the same effort as React, with worse long-term outcomes. Leadership approved moving immediately. A year-plus plan became a few weeks.
 
-**2. Use Magic Patterns as the primary design tool**
+**2. Use Magic Patterns as the design tool**
 
-Rather than hiring a designer or Webflow consultant, used Magic Patterns to produce a fully on-brand React prototype — complete component library, brand token system, responsive behaviour, and accessibility compliance — before any production code was written. This gave leadership a concrete, clickable prototype to approve before committing engineering resources.
+Instead of hiring a designer or a Webflow consultant, I used Magic Patterns to produce an on-brand React prototype before any production code. It included a component library, brand tokens, responsive behaviour, and accessibility compliance. Leadership could click through it before committing engineering time.
 
-**3. Choose Next.js over a simpler Vite + React Router setup**
+**3. Choose Next.js over Vite and React Router**
 
-Evaluated both options and chose Next.js for its server-side rendering (direct SEO benefit for a marketing site), file-based routing, and native metadata handling. Vercel's first-class support made deployment, staging branches, and preview URLs essentially zero-config.
+Next.js gave server-side rendering for SEO, file-based routing, and native metadata. On Vercel, deployment, staging branches, and preview URLs were essentially zero-config.
 
 **4. Design for non-developer contribution from day one**
 
-The explicit goal was a codebase that a Marketing Manager could actively contribute to — not just review. Chose a named Tailwind token system, a clear folder structure, and wrote a **CLAUDE.md** conventions file so Claude Code and Cursor could produce codebase-consistent output without manual correction. Copy updates, new pages, and image swaps no longer require a developer.
+A Marketing Manager needed to contribute, not only review. Named Tailwind tokens, a clear folder structure, and a **CLAUDE.md** file let Claude Code and Cursor match the codebase. Copy updates, new pages, and image swaps no longer need a developer.
 
 #### Execution
 
-- Ran **60+ iterations in Magic Patterns** to produce a complete, approved design system covering **10+ page templates** and a full reusable component library — homepage, pricing, sign-up, feature template, About, Contact, Integrations, Terms, and a brand reference page
-- **Set up full production infrastructure**: Next.js 15 repo, Vercel hosting with staging and production branch strategy, Vercel Blob for asset storage, and Formspree for form handling with spam filtering and Zapier workflows
-- **Wrote CLAUDE.md** — a conventions document covering Tailwind tokens, component patterns, routing, image handling, and SEO conventions, enabling Claude Code and Cursor to contribute consistently without rework
-- **Generated 17+ pages** using a combination of Magic Patterns exports, Claude Code, and Cursor with structured CSV-driven content inputs for batch feature page generation
-- Established a repeatable **design-to-production pipeline**: brief in Magic Patterns → export TSX → integrate → Vercel auto-deploys a preview URL for review
-- Produced a full **project plan and task breakdown** — including content audit, infrastructure setup, third-party tool migration checklist, and DNS cutover process — for cross-functional execution
+- Ran **60+ Magic Patterns iterations** for an approved design system: **10+ page templates** and a component library covering homepage, pricing, sign-up, feature template, About, Contact, Integrations, Terms, and a brand reference page
+- Stood up production: Next.js 15, Vercel with staging and production branches, Vercel Blob for assets, and Formspree with spam filtering and Zapier
+- Wrote **CLAUDE.md** for Tailwind tokens, component patterns, routing, images, and SEO, so Claude Code and Cursor could contribute without rework
+- Generated **17+ pages** from Magic Patterns exports, Claude Code, and Cursor, using CSV inputs for batch feature pages
+- Set a repeatable path: brief in Magic Patterns, export TSX, integrate, and Vercel deploys a preview URL
+- Wrote the project plan for the content audit, infrastructure, third-party migration, and DNS cutover
 
 #### Outcome
 
-- **Full marketing site redesigned and launched in under 4 weeks** — compared to a planned 12+ month timeline under the original 2027 approach
-- **Non-developer contribution enabled for the first time**: Marketing Manager can draft pages in Magic Patterns, push content updates via Claude Code, and review changes on Vercel preview URLs without engineering involvement
-- **Two high-priority product launches unblocked** — previously stalled on the old platform, built and ready for content at launch
-- **All future pages follow a consistent, templated system** — new feature pages are a content swap, not a new project
-- **~40% reduction in monthly tooling costs** compared to Webflow site plan and workspace seat fees
-- Achieved a **99% Lighthouse score** and implemented **AEO** (answer engine optimization) for the new site
+- Site launched in under **4 weeks**, against a planned 12+ months
+- Marketing can draft pages in Magic Patterns, push updates with Claude Code, and review on Vercel preview URLs without engineering
+- **Two product launches** that were stuck on the old platform were built and ready for content
+- New feature pages are a content swap inside a shared template, not a new project
+- Monthly tooling cost down about **40%** versus the Webflow plan and seat fees
+- **99% Lighthouse** score, and answer engine optimization (AEO) on the new site
 
-### Eliminating Team Bottlenecks — A Scalable, Internal AI Knowledge System
+### Eliminating Team Bottlenecks: A Scalable, Internal AI Knowledge System
 
 Built an internal AI assistant now handling hundreds of support queries per month. Eliminated a recurring bottleneck for the product team without adding headcount or process overhead.
 
+Themes: AI · Speed increase · Cost decrease
+
 #### Context
 
-The product team was increasingly pulled into **customer support** — fielding interruptions via **Slack**, **email**, and calls to help resolve tickets. **Comprehensive documentation**, **PRDs**, and **BI tools** existed but were **underutilized** by the **Customer Success (CS) team**.
+Customer support kept pulling the product team into Slack, email, and calls. Documentation, PRDs, and BI tools already existed. Customer Success was not using them.
 
 #### Problem
 
-Support staff relied on the **product team** for answers instead of **self-serving** through available resources, causing:
+Support asked the product team instead of looking it up. That meant constant interruptions, slower replies while people waited on a PM, and documentation that sat unused.
 
-- **Constant interruptions** to product work and roadmap execution
-- **Slower response times** due to dependency on **PM availability**
-- **Underutilization** of existing documentation
-
-**Core tension:** How do you enable support to independently access product knowledge without making the product team a bottleneck?
+**Core tension:** Let support reach product knowledge on their own, without making the product team the bottleneck.
 
 #### My Role
 
-- Owned **internal documentation strategy** as part of the product team
-- **Interviewed CS team members** to understand their **real-time support workflows**
-- Identified that the issue wasn't lack of documentation — it was lack of **accessibility** and **synthesis**
-- Explored solutions ranging from **process improvements** to **tooling**
+- **Owned internal documentation strategy**
+- **Interviewed Customer Success** on how they actually handled live tickets
+- **Found the gap**: not missing documentation, but access and synthesis
+- **Tried process changes first**, then tooling
 
 #### Key Decisions
 
 **1. Validate non-technical solutions first**
 
-Improved internal documentation and ran a lunch & learn on effective self-serve questioning techniques (adapting PM-style user interviewing for support). Helpful, but did not reduce reliance on the product team.
+I improved the docs and ran a lunch and learn on self-serve questioning, adapting PM-style interviews for support. It helped. It did not reduce reliance on the product team.
 
 **2. Invest in a scalable system**
 
-Identified an opportunity to use AI to aggregate and synthesize internal knowledge. Proposed an internal "Product Concierge" to enable real-time, self-serve answers.
+AI could aggregate and synthesize what we already had. I proposed an internal Product Concierge for real-time, self-serve answers.
 
 **3. Prioritize trust and accuracy over breadth**
 
-Designed the system with strict guardrails: surfacing source references, indicating the age of information, and limiting responses when confidence was low.
+The assistant cites its sources, shows how old the information is, and holds back when confidence is low.
 
 #### Execution
 
-- Defined requirements and architecture for a **Slack-based AI assistant** connected to **internal documentation**, **PRDs**, **code repositories**, and select **BI queries**
-- Collaborated with **developers** to validate the approach and ensure **feasibility**
-- **Built and iterated** on the solution, refining **prompts** and **data connections**
-- Implemented **tracking** to monitor **usage** and **response quality**
+- Specified a **Slack assistant** connected to internal docs, PRDs, code repositories, and selected BI queries
+- Checked the approach with developers before building
+- Built it and iterated on prompts and data connections
+- Added tracking for usage and response quality
 
 #### Outcome
 
-- **"Product Concierge"** is now actively used, handling **hundreds of internal queries per month**
-- Reduced **direct interruptions** to the product team
-- Improved **speed** and **consistency** of support responses
-- Created a **scalable knowledge system**, reducing dependency on **individual team members**
-- Established a foundation for **future internal AI tooling**
+- **Product Concierge** handles **hundreds of internal queries a month**
+- Fewer direct interruptions to the product team
+- Faster, more consistent support replies
+- Less dependence on any one person for product knowledge
+- A base for later internal AI tools
 
-### Converting a High-Value Client Problem into a 20% Revenue Lift & Reusable Platform
+### Rebuilding Contract Extraction for Every Paying Customer
 
-Turned a high-value client pain point into a 20% YoY revenue increase. Delivered a configurable workflow platform on a deadline; unlocked additional expansion within the same account.
+Built and shipped an OCR and extraction pipeline that reads contract PDFs and turns them into structured terms. Live for 100% of paying customers, with accuracy above 95%, AI issues down 80%, and cost down by two-thirds.
+
+Themes: AI · Cost decrease · Risk decrease
 
 #### Context
 
-A **high-value client** relied on **email** and **spreadsheets** for a **critical financial workflow** and experienced delays in their **year-end reconciliation** due to **missing records**. They came to our product and leadership team with a request to build a **proper solution**.
+Buyers expected Pivott to read their contracts with AI. Early tests handled basic details and missed complex clauses. I owned the work from that first test through a full rebuild of the extraction pipeline, and the initiative shipped.
 
 #### Problem
 
-The client required a **highly customized workflow** our product didn't support. Key challenges included:
+The early pipeline called a model up to **ten times per contract**. That was slow, expensive, and hard to trust when a field was wrong. A narrow first test was the way to learn. It was not the product we shipped.
 
-- A **time-sensitive deadline** tied to their **fiscal year-end**
-- **Conflicting requirements** across **multiple client departments**
-- **One-off solution risk** — potential roadmap diversion without clear **reuse potential**
-
-**Core tension:** Solve a critical client problem quickly without introducing long-term product bloat.
+**Core tension:** Prove the AI could extract real contract terms, then rebuild it so the cost and the accuracy could hold in production.
 
 #### My Role
 
-- **Led user interviews** with client stakeholders to uncover **root workflow issues**
-- **Synthesized findings** into clear **product opportunities** for leadership
-- Owned the **PRD** and **solution design**, including a **functional prototype**
-- Liaised with **Customer Success** and **Engineering** to ensure alignment
-- Acted as the bridge between **client needs**, **business goals**, and **technical feasibility**
+- **Created and owned** the OCR and AI initiative from the feasibility test through the shipped pipeline
+- **Wrote the PRD** to rebuild extraction as a single structured model call
+- **Stress-tested** bulk upload on real customer contracts before a wider release
+- **Served as Incident Lead** when an OCR failure hit production. The feature was flagged off, AI was re-run, and no customer-facing message was needed
 
 #### Key Decisions
 
-**1. Build vs. defer**
+**1. Start with a small demo, then ship the real pipeline**
 
-- Option A: Defer to protect the roadmap
-- Option B: Build a one-off solution
-- **Option C (chosen): Build an MVP with a scalable architecture**
+The first test accepted a vendor processing limit and extracted only contract name and date. That limit was the demo. The shipped pipeline is the rebuild.
 
-**2. MVP scope definition**
+**2. Keep automation conservative where trust mattered**
 
-Prioritized only the core workflow blockers for year-end readiness. Deferred edge cases to post-launch iterations.
+Recurring tasks stayed on simple patterns, with odd cases sent to manual review. A vendor was not created from a name alone.
 
-**3. Platform investment**
+**3. Rebuild as one structured call**
 
-Designed the solution to support configurable workflows (fields, statuses, naming), with clear potential for reuse across other clients.
+Replaced up to ten model calls per contract with one. Added per-field reasoning, a staff review panel, a provider fallback, and OCR caching.
 
 #### Execution
 
-- Aligned **internal stakeholders** on **scope vs. timeline** tradeoffs
-- Collaborated with **engineering** to define a **flexible technical design** under **time constraints**
-- Presented a **client-facing proposal** including problem framing, a **prototype walkthrough**, a **delivery plan**, and a **pricing and support model**
+- Wrote requirements so generated summaries **append to existing user notes** rather than overwrite them
+- Moved the rebuild through requirements, design, and hand-off
+- Owned prompt quality as ongoing work, not a single release
 
 #### Outcome
 
-- Client accepted the proposal, increasing spend by **20% YoY**
-- Delivered **on time** for **fiscal year-end**
-- Established a foundation for **configurable workflows**, enabling **reuse across other clients**
-- Project success generated an **internal referral**, expanding into **additional opportunities** within the client's organization
+- The initiative **shipped**. The rebuilt pipeline is **live for 100% of paying customers**
+- Extraction accuracy **held above 95%**
+- Internal and external reports of AI-related issues **dropped by 80%**
+- Processing cost **dropped by roughly two-thirds**, short of an 80% cost target
+
+### From a Cheap Prototype to a First Enterprise Pilot
+
+Owned the AI Resident Lease Auditor from a feasibility prototype through a first enterprise pilot. F-score of about 0.9, and roughly 300-unit properties audited in under four hours versus days or weeks by hand.
+
+Themes: AI · 0→1 · Revenue increase
+
+#### Context
+
+An enterprise property operator audited leases by hand for accuracy, consistency, and omissions. The work needed many people and a lot of time. The question that started the work: can existing document AI read a lease and compare it to expected values?
+
+#### Problem
+
+A full audit product, with customer access, saved output, and every field, would have been a large bet before anyone knew whether the model could match a lease to expected values. The sales motion was not self-serve. Staff would run audits on a prospect's real leases before any purchase.
+
+**Core tension:** Learn whether the audit was real without building the commercial product first.
+
+#### My Role
+
+- **Owned the initiative** from the feasibility prototype through go-to-market planning
+- **Wrote the feasibility PRD**, the Phase 1 MVP page, and the later PRDs
+- **Scoped the first build** as a sales-call tool: no customer access, two fields hard-coded, saved output out of scope
+- **Owned demo preparation** for the first live enterprise demo: goals, script, notes, and action items
+
+#### Key Decisions
+
+**1. Test the cheapest version first**
+
+The prototype split PDFs into 15-page pieces, sent them to a document AI service, and compared the results to expected values, treating a currency value written two ways as one match.
+
+**2. Sell through staff-run concierge audits**
+
+Chose a go-to-market model of staff-run audits ahead of product-market fit. Hid staff-only screens from customer roles and skipped guided self-serve onboarding.
+
+**3. Make a dollar difference the headline**
+
+The engine stored match or no-match, not the size of a discrepancy. A dollar figure persuades more than an item count, so storing that difference became a prerequisite for the reporting work.
+
+**4. Validate on known answers before more sales use**
+
+Designed a three-dataset plan: synthetic seeded errors, a known-flawed real property, and an unaudited property. Success was full reconciliation: every real discrepancy flagged, and no correct value flagged.
+
+#### Execution
+
+- Wrote the PRDs for roll-up reporting, exports, UI simplification, document identification, and source-document traceability
+- Got the document AI trained on the customer's lease format once that need showed up in a check-in
+- Wrote the demo plan and the follow-up to fix known bugs before the next customer audit
+
+#### Outcome
+
+- The demo **converted into a pilot**. The team began auditing properties the customer was preparing to sell. This is a pilot, not a signed contract
+- The engine audited roughly **300 unit properties in under four hours**, versus the days or weeks the customer described for a manual pass
+- Trained documents reached an **F-score of about 0.9**
+
+### Shipping Product-Led Growth, from a Sandbox to Self-Serve
+
+Designed and shipped product-led growth from a sandbox and concierge upload to self-serve sign-up. Freemium tiers, spreadsheet upload, and pricing and packaging shipped with that motion.
+
+Themes: Product-led growth · 0→1 · Strategy
+
+#### Context
+
+A prospect had no way to sign up for Pivott alone. Sales qualified the lead, and staff created the company and user by hand. I owned the plan to change that, and the work shipped.
+
+#### Problem
+
+Full self-serve sign-up was the larger build. There was also no permanent place to show the product without copying a company for every prospect. Starting with the full sign-up would have spent the roadmap before anyone had used the product on their own.
+
+**Core tension:** Learn whether self-serve demand was real, then ship the sign-up, rather than stopping at the test.
+
+#### My Role
+
+- **Created and owned** the initiative, from the plan through the shipped sign-up
+- **Chose a sandbox-first path**, then carried it through to self-serve onboarding
+- **Owned pricing and packaging**, and tracked conversion and attach rate
+- Wrote the requirements for the sandbox, the automatic invite, the concierge upload, and self-serve sign-up
+
+#### Key Decisions
+
+**1. Validate with a sandbox, then build sign-up**
+
+Asked new users to try a sandbox first, so demand was visible before the harder build. Self-serve sign-up shipped after that. It was the sequence, not the end state.
+
+**2. Make the sandbox permanent**
+
+Redesigned it from a per-prospect copy into one always-on environment. That removed sales-conversion pollution and the work of managing duplicate companies.
+
+**3. Protect account privacy**
+
+When someone signs up twice with the same email, the flow sends a login link rather than confirming that the account exists.
+
+**4. Ship concierge upload on the way to full automation**
+
+Customers see automatic contract processing. Staff entered the details behind the scenes as the smaller first step. Spreadsheet upload shipped with the rest of the motion.
+
+#### Execution
+
+- Presented the plan to the product team and wrote the requirements for what shipped
+- Prioritized the automatic sandbox invite, then the self-serve flow
+
+#### Outcome
+
+- **Shipped:** the sandbox, the automatic invite, concierge upload, self-serve sign-up, and spreadsheet upload
+- Freemium tiers, self-serve onboarding, and time-to-value work landed with pricing and packaging I owned
 
 ## Recent Work Experience
 
-### Senior Product Manager — Pivott Software
+### Senior Product Manager, Pivott Software
 
 [Pivott Software](https://pivott.io) · Victoria, BC · May 2025 – Present
 
@@ -355,44 +404,43 @@ Designed the solution to support configurable workflows (fields, statuses, namin
 
 - **Built and deployed an agentic AI workflow** that reads contract PDFs via OCR and extracts key terms into structured, normalized data for tens of thousands of contracts a month.
 - **Ran the roadmap for Pivott's multi-module SaaS platform** end-to-end, taking products to market on multiple occasions.
-- **Collaborated directly with the CEO** to define product vision, translate business strategy into a prioritized roadmap, and identify new revenue opportunities.
-- **Designed a formal product–design–engineering operating model**, including hiring and onboarding a 3-person product team, establishing department processes, and managing professional development.
-- **Scaled the engineering team from 5 to 8** by hiring and onboarding 3 developers and a QA engineer, establishing agile best practices and team rituals from the ground up.
+- **Collaborated directly with the CEO** to define product vision, translate business strategy into a prioritized roadmap, and identify new revenue opportunities. **Oversaw product improvements that saw revenue 20x.**
+- **Designed a formal product, design, and engineering operating model**, including hiring and onboarding a **3-person product team**, establishing department processes, and managing professional development, and scaled engineering from **5 to 8**.
 
-### Product Manager — Pivott Software
+### Product Manager, Pivott Software
 
 [Pivott Software](https://pivott.io) · Victoria, BC · Jan 2024 – May 2025
 
 Team of 8 developers
 
-- **Led 0→1 launch of a contract management SaaS platform** from market analysis and ideation through to revenue in under a year.
+- **Led 0→1 launch of a contract management SaaS platform** from market analysis through to revenue in under a year.
 - **Designed and executed a product-led growth (PLG) strategy** including freemium tiers, self-serve onboarding, and TTV optimizations, owning pricing and packaging and tracking conversion and attach rate.
 - **Implemented a sandbox environment and sign-up workflow** to demonstrate features to new users and convert them to freemium or paid.
 - **Ran go-to-market launches** alongside marketing; tracked feature adoption and release cadence weekly.
 
-### Product Manager — PostEngine
+### Product Manager, PostEngine
 
 [PostEngine](https://postengine.com) · Victoria, BC · April 2021 – Dec 2023
 
 Team of 6 developers
 
 - **Owned product for a Chrome extension and desktop platform** automating rental ad posting at scale, pulling live listings data and auto-publishing to Craigslist and other channels across 3M+ ads annually.
-- **Built cross-channel lead attribution** connecting phone, email, text, and web inquiries back to the specific ad that generated them, turning ad performance into a number customers could actually act on.
+- **Worked with the team on cross-channel lead attribution**, connecting phone, email, text, and web inquiries back to the specific ad that generated them, turning ad performance into a number customers could actually act on.
 - **Owned Property Portal**, the customer-facing reporting product surfacing ad performance and exportable attribution data, in place of raw activity logs.
 
 ## Volunteering
 
-### Mentor — PM Mentorship Program
+### Mentor, PM Mentorship Program
 
 [ProductBC](https://productbc.ca/) · Vancouver, BC · September 2024 – Present
 
 - **Mentored 3 product managers** across separate 6-month engagements, ranging in roles from Associate PM to PM through hands-on support and career coaching.
-- **Held bi-weekly 1:1s** focused on real-world product challenges, team dynamics, and the day-to-day realities of working in product.
-- **Fostered a space for honest, practical conversation** — balancing structured feedback with genuine camaraderie and peer support.
+- **Held bi-weekly 1:1s** focused on real-world product challenges, team dynamics, and career development.
+- **Fostered a space for candid conversations**, giving perspective without assuming solutions.
 
 ## Education & Certifications
 
-### Bachelor of Science — Computer Science
+### Bachelor of Science, Computer Science
 
 Faculty of Engineering, [University of Victoria](https://uvic.ca) · September 2014 – August 2019
 

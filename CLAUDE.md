@@ -78,7 +78,8 @@ Personal PM portfolio — single-page static site hosted on GitHub Pages at `htt
 - Inline Feather-style SVG icons on nav and section titles
 - Semantic layout: `<section id="…">` → `.container` wrapper
 - Case studies: native `<details>/<summary>` (not JS accordion)
-- Copy: Canadian English (`en-CA`) — use **-ize** spellings (`optimize`, `analyze`, `prioritize`, `synthesize`), not **-ise**
+- Copy: Canadian English (`en-CA`). Use **-ize** spellings (`optimize`, `analyze`, `prioritize`, `synthesize`), not **-ise**
+- Copy: do not use em dashes (`—`, U+2014) in published copy, including `index.html` (body, titles, and meta text), `index.html.md`, `llms.txt`, `404.html`, and other pages a visitor or crawler reads. Use a comma, colon, period, or parentheses instead. En dashes (`–`, U+2013) are still correct for ranges, such as dates.
 
 ### CSS
 
