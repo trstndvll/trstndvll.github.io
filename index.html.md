@@ -5,7 +5,7 @@ Product leader with 5+ years driving B2B SaaS from 0→1 launch through growth-s
 - [Email](mailto:trstndvll@gmail.com)
 - [GitHub](https://github.com/trstndvll)
 - [LinkedIn](https://linkedin.com/in/trstndvll)
-- Resume: [Full](resume/) (single-column, all Selected Work) · [Compact](resume/?mode=compact) (omits some case studies for a shorter PDF)
+- Resume: the Resume link in the hero opens the contact form with a request for a copy
 
 ## About Me
 
